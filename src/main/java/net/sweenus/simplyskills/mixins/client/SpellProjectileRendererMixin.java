@@ -29,13 +29,14 @@ public class SpellProjectileRendererMixin <T extends Entity & FlyingItemEntity> 
         if (entity instanceof SpellProjectile projectile) {
             if (projectile.renderData() != null) {
                 Spell.ProjectileModel renderData = projectile.renderData();
-                String modelId = renderData.model_id;
-                String[] modelList =  new String[] {"swordfall", "sword"};
+                if (renderData != null) {
+                    String modelId = renderData.model_id;
+                    String[] modelList = new String[]{"swordfall", "sword"};
 
-                if (HelperMethods.stringContainsAny(modelId, modelList)) {
-                    renderData.rotate_degrees_per_tick = 0;
+                    if (modelId != null && HelperMethods.stringContainsAny(modelId, modelList)) {
+                        renderData.rotate_degrees_per_tick = 0;
+                    }
                 }
-
             }
         }
     }
