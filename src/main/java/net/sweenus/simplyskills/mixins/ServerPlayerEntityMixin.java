@@ -11,6 +11,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.sweenus.simplyskills.SimplySkills;
 import net.sweenus.simplyskills.abilities.*;
+import net.sweenus.simplyskills.abilities.compat.ProminenceInternalAbilities;
 import net.sweenus.simplyskills.abilities.compat.SimplySwordsGemEffects;
 import net.sweenus.simplyskills.registry.EffectRegistry;
 import net.sweenus.simplyskills.registry.SoundRegistry;
@@ -336,17 +337,17 @@ public abstract class ServerPlayerEntityMixin {
 
             NecromancerAbilities.effectPlague(player);
 
-            if (FabricLoader.getInstance().isModLoaded("prominent"))
+            if (FabricLoader.getInstance().isModLoaded("prominent")) {
                 ProminenceAbilities.warriorsDevotion(player);
-
-
+                if (FabricLoader.getInstance().isModLoaded("immersive_melodies"))
+                    ProminenceInternalAbilities.bardAbility(player);
+            }
 
             // Tick Gem effects
             if (FabricLoader.getInstance().isModLoaded("simplyswords")) {
                 SimplySwordsGemEffects.spellforged(player);
                 SimplySwordsGemEffects.soulshock(player);
             }
-
 
         }
     }

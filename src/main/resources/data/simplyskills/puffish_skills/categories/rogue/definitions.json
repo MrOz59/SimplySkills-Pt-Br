@@ -4894,8 +4894,8 @@
         ]
     },
     "rogueSignatureEvasionFanOfBladesBladestormSiphon": {
-        "title": {"translate":"text.skills.rogueSignatureEvasionFanOfBladesBladestorm.title"},
-        "description": {"translate":"text.skills.rogueSignatureEvasionFanOfBladesBladestorm.description"},
+        "title": {"translate":"text.skills.rogueSignatureEvasionFanOfBladesBladestormSiphon.title"},
+        "description": {"translate":"text.skills.rogueSignatureEvasionFanOfBladesBladestormSiphon.description"},
         "size": 1.1,
         "frame": {
             "type": "texture",

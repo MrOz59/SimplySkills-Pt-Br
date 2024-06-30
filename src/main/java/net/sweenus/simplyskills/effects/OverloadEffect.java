@@ -27,7 +27,7 @@ public class OverloadEffect extends StatusEffect {
         if (!livingEntity.getWorld().isClient()) {
 
             int radius = 3;
-            double damage = (livingEntity.getMaxHealth() - 6) * (1 + SpellPower.getSpellPower(SpellSchools.SOUL, livingEntity).randomValue());
+            double damage = Math.min((livingEntity.getMaxHealth() / 6) * (1 + SpellPower.getSpellPower(SpellSchools.SOUL, livingEntity).randomValue()), livingEntity.getMaxHealth());
             DamageSource damageSource = livingEntity.getDamageSources().generic();
             DamageSource damageSourceMagic = livingEntity.getDamageSources().indirectMagic(livingEntity, livingEntity);
 

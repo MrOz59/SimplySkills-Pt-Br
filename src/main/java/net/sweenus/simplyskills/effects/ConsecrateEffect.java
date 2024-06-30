@@ -53,7 +53,7 @@ public class ConsecrateEffect extends StatusEffect {
                                     le.setVelocity((le.getX() - player.getX()) /4,  (le.getY() - player.getY()) /4, (le.getZ() - player.getZ()) /4);
 
                                 le.timeUntilRegen = 0;
-                                le.damage(player.getDamageSources().magic(), (float) damage);
+                                le.damage(player.getDamageSources().indirectMagic(player, player), (float) damage);
                                 le.timeUntilRegen = 1;
 
                                 // Taunt

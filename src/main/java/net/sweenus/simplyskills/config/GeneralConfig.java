@@ -57,17 +57,31 @@ public class GeneralConfig implements ConfigData {
     @ConfigEntry.Gui.Tooltip
     public float DASPassiveEntityModifier = 0.2f;
     @ConfigEntry.Gui.Tooltip
+    public float addMultiHealthRequirement = 500f;
+    @ConfigEntry.Gui.Tooltip
     public double DASHealth = 3.0;
+    @ConfigEntry.Gui.Tooltip
+    public double DASHealthAddMulti = 1.0;
     @ConfigEntry.Gui.Tooltip
     public double DASAttack = 0.2;
     @ConfigEntry.Gui.Tooltip
+    public double DASAttackAddMulti = 1.0;
+    @ConfigEntry.Gui.Tooltip
     public double DASArmor = 1.0;
+    @ConfigEntry.Gui.Tooltip
+    public double DASArmorAddMulti = 1.0;
     @ConfigEntry.Gui.Tooltip
     public double DASArmorToughness = 0.5;
     @ConfigEntry.Gui.Tooltip
+    public double DASToughnessAddMulti = 1.0;
+    @ConfigEntry.Gui.Tooltip
     public double DASSpeed = 0.3;
     @ConfigEntry.Gui.Tooltip
+    public double DASSpeedAddMulti = 1.0;
+    @ConfigEntry.Gui.Tooltip
     public double DASKnockbackResist = 0.1;
+    @ConfigEntry.Gui.Tooltip
+    public double DASResistAddMulti = 1.0;
 
     @ConfigEntry.Gui.Tooltip
     @ConfigEntry.Gui.PrefixText

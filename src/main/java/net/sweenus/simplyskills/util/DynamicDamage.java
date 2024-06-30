@@ -105,24 +105,45 @@ public class DynamicDamage {
                 String message = "Attempting to apply DAS attributes to " + livingEntity.getName().getString() + ". Player Count: " + totalPlayerCount + ". total points spent: " + totalPointsSpent;
                 System.out.println(message);
             }
+
+            float addRequirement = SimplySkills.generalConfig.addMultiHealthRequirement;
+            double addHealth = 1;
+            double addAttack = 1;
+            double addArmor = 1;
+            double addToughness = 1;
+            double addSpeed = 1;
+            double addResistance = 1;
+            EntityAttributeInstance attributeInstance = livingEntity.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
+            if (attributeInstance != null) {
+                double maxHealth = attributeInstance.getBaseValue();
+                if (maxHealth >= addRequirement) {
+                    addHealth = SimplySkills.generalConfig.DASHealthAddMulti;
+                    addAttack = SimplySkills.generalConfig.DASAttackAddMulti;
+                    addArmor = SimplySkills.generalConfig.DASArmorAddMulti;
+                    addToughness = SimplySkills.generalConfig.DASToughnessAddMulti;
+                    addSpeed = SimplySkills.generalConfig.DASSpeedAddMulti;
+                    addResistance = SimplySkills.generalConfig.DASResistAddMulti;
+                }
+            }
+
             if (SimplySkills.generalConfig.DASHealth > 0)
                 DynamicDamage.dynamicTotalAttributeScaling(livingEntity, EntityAttributes.GENERIC_MAX_HEALTH, "SimplySkills health DAS",
-                        SimplySkills.generalConfig.DASHealth, UUID.fromString("631937f6-bc47-486b-b07a-542823d668a6"), totalPointsSpent);
+                        SimplySkills.generalConfig.DASHealth, UUID.fromString("631937f6-bc47-486b-b07a-542823d668a6"), totalPointsSpent * addHealth);
             if (SimplySkills.generalConfig.DASAttack > 0)
                 DynamicDamage.dynamicTotalAttributeScaling(livingEntity, EntityAttributes.GENERIC_ATTACK_DAMAGE, "SimplySkills attack damage DAS",
-                        SimplySkills.generalConfig.DASAttack, UUID.fromString("8097403f-ed25-4534-b7f9-854e16ef2fbb"), totalPointsSpent);
+                        SimplySkills.generalConfig.DASAttack, UUID.fromString("8097403f-ed25-4534-b7f9-854e16ef2fbb"), totalPointsSpent * addAttack);
             if (SimplySkills.generalConfig.DASArmor > 0)
                 DynamicDamage.dynamicTotalAttributeScaling(livingEntity, EntityAttributes.GENERIC_ARMOR, "SimplySkills armor DAS",
-                        SimplySkills.generalConfig.DASArmor, UUID.fromString("eae99963-45c4-4651-b501-4b2e16879705"), totalPointsSpent);
+                        SimplySkills.generalConfig.DASArmor, UUID.fromString("eae99963-45c4-4651-b501-4b2e16879705"), totalPointsSpent * addArmor);
             if (SimplySkills.generalConfig.DASArmorToughness > 0)
                 DynamicDamage.dynamicTotalAttributeScaling(livingEntity, EntityAttributes.GENERIC_ARMOR_TOUGHNESS, "SimplySkills armor toughness DAS",
-                        SimplySkills.generalConfig.DASArmorToughness, UUID.fromString("0794ab19-7dbd-421f-90c7-6b65e3aee495"), totalPointsSpent);
+                        SimplySkills.generalConfig.DASArmorToughness, UUID.fromString("0794ab19-7dbd-421f-90c7-6b65e3aee495"), totalPointsSpent * addToughness);
             if (SimplySkills.generalConfig.DASSpeed / 100 > 0)
                 DynamicDamage.dynamicTotalAttributeScaling(livingEntity, EntityAttributes.GENERIC_MOVEMENT_SPEED, "SimplySkills movement speed DAS",
-                        SimplySkills.generalConfig.DASSpeed / 100, UUID.fromString("426d5ed8-020b-484f-93d9-4327a3c05c97"), totalPointsSpent);
+                        SimplySkills.generalConfig.DASSpeed / 100, UUID.fromString("426d5ed8-020b-484f-93d9-4327a3c05c97"), totalPointsSpent * addSpeed);
             if (SimplySkills.generalConfig.DASKnockbackResist / 100 > 0)
                 DynamicDamage.dynamicTotalAttributeScaling(livingEntity, EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, "SimplySkills knockback resistance DAS",
-                        SimplySkills.generalConfig.DASKnockbackResist / 100, UUID.fromString("9ffef649-025d-4c30-98ed-d4378cd07d36"), totalPointsSpent);
+                        SimplySkills.generalConfig.DASKnockbackResist / 100, UUID.fromString("9ffef649-025d-4c30-98ed-d4378cd07d36"), totalPointsSpent * addResistance);
         }
 
     }

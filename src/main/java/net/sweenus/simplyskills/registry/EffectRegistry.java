@@ -14,6 +14,7 @@ import net.spell_engine.api.effect.ActionImpairing;
 import net.spell_engine.api.effect.EntityActionsAllowed;
 import net.spell_engine.api.effect.Synchronized;
 import net.spell_power.api.SpellPower;
+import net.spell_power.api.SpellPowerMechanics;
 import net.spell_power.api.SpellSchools;
 import net.sweenus.simplyskills.SimplySkills;
 import net.sweenus.simplyskills.effects.*;
@@ -77,11 +78,11 @@ public class EffectRegistry {
                     0.02,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
     public static StatusEffect PRECISION= new PrecisionEffect(StatusEffectCategory.BENEFICIAL, 3124687)
-            .addAttributeModifier(SimplySkills.critDamageAttribute,
+            .addAttributeModifier(SpellPowerMechanics.CRITICAL_CHANCE.attribute,
                     "32a5a129-51a6-4a38-b78e-e7afb69f9e17",
                     0.02,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-            .addAttributeModifier(SimplySkills.critDamageAttribute,
+            .addAttributeModifier(SpellPowerMechanics.CRITICAL_DAMAGE.attribute,
                     "bb6233b1-4759-47d0-9044-d509b4bc6695",
                     0.02,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
@@ -175,11 +176,11 @@ public class EffectRegistry {
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
 
     public static StatusEffect OVERLOAD= new OverloadEffect(StatusEffectCategory.BENEFICIAL, 3124687)
-            .addAttributeModifier(SimplySkills.critDamageAttribute,
+            .addAttributeModifier(SpellPowerMechanics.CRITICAL_DAMAGE.attribute,
                     "c937f985-c571-46e5-8339-b4ccf4c15442",
                     0.45,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-            .addAttributeModifier(SimplySkills.critChanceAttribute,
+            .addAttributeModifier(SpellPowerMechanics.CRITICAL_CHANCE.attribute,
                     "ad26be8b-db35-4d04-98db-d8943e4ac8be",
                     0.10,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
@@ -195,7 +196,7 @@ public class EffectRegistry {
                     "24e81380-108e-488b-9d48-995f852d8fba",
                     0.05,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
-            .addAttributeModifier(SimplySkills.spellHasteAttribute,
+            .addAttributeModifier(SpellPowerMechanics.HASTE.attribute,
                     "812e38a7-9608-4a82-a8d7-6f6c8db2f4d8",
                     0.05,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL)

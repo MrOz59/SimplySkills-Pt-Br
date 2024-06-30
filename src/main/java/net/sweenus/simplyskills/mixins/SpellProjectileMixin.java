@@ -34,25 +34,13 @@ public abstract class SpellProjectileMixin extends ProjectileEntity {
 
     @Shadow private Spell.ProjectileData.Perks perks;
 
-    @Shadow public abstract Spell.ProjectileData.Perks mutablePerks();
-
     @Shadow public float range;
-
-    @Shadow protected Set<Integer> impactHistory;
-
-    @Shadow public abstract SpellProjectile.Behaviour behaviour();
 
     @Shadow private Identifier spellId;
 
     @Shadow private SpellHelper.ImpactContext context;
 
-    @Shadow public abstract Entity getFollowedTarget();
-
-    @Shadow public abstract void setFollowedTarget(Entity target);
-
     @Shadow private Entity followedTarget;
-
-    @Shadow protected abstract void followTarget();
 
     @Shadow public abstract void setVelocity(double x, double y, double z, float speed, float spread, float divergence);
 

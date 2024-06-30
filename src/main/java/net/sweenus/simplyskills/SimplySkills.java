@@ -71,20 +71,8 @@ public class SimplySkills implements ModInitializer {
         return specialisations;
     }
 
-    public static EntityAttribute critChanceAttribute;
-    public static EntityAttribute critDamageAttribute;
-    public static EntityAttribute spellHasteAttribute;
-
     @Override
     public void onInitialize() {
-
-        // Spell power attribute IDs
-        if (Registries.ATTRIBUTE.get(new Identifier("spell_power:critical_chance")) != null)
-            critChanceAttribute = Registries.ATTRIBUTE.get(new Identifier("spell_power:critical_chance"));
-        if (Registries.ATTRIBUTE.get(new Identifier("spell_power:critical_damage")) != null)
-            critDamageAttribute = Registries.ATTRIBUTE.get(new Identifier("spell_power:critical_damage"));
-        if (Registries.ATTRIBUTE.get(new Identifier("spell_power:spell_haste")) != null)
-            spellHasteAttribute = Registries.ATTRIBUTE.get(new Identifier("spell_power:spell_haste"));
 
         AutoConfig.register(ConfigWrapper.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new));
         generalConfig = AutoConfig.getConfigHolder(ConfigWrapper.class).getConfig().client;

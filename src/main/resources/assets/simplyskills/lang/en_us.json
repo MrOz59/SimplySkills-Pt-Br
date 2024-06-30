@@ -7,124 +7,236 @@
 
   "effect.simplyskills.berserking":                     "Berserking",
   "effect.simplyskills.berserking.desc":                "Grants stacking offensive buffs each time you hit an enemy.",
+  "effect.simplyskills.berserking.description":      "Grants stacking offensive buffs each time you hit an enemy.",
+
   "effect.simplyskills.bloodthirsty":                   "Bloodthirsty",
   "effect.simplyskills.bloodthirsty.desc":              "Recover HP when you defeat an enemy.",
+  "effect.simplyskills.bloodthirsty.description":              "Recover HP when you defeat an enemy.",
+
   "effect.simplyskills.elemental_arrows":               "Elemental Arrows",
   "effect.simplyskills.elemental_arrows.desc":          "Your next fully charged bow attack fires homing arrows infused with elemental magic.",
+  "effect.simplyskills.elemental_arrows.description":          "Your next fully charged bow attack fires homing arrows infused with elemental magic.",
+
   "effect.simplyskills.evasion":                        "Evasion",
   "effect.simplyskills.evasion.desc":                   "Chance to avoid incoming damage.",
+  "effect.simplyskills.evasion.description":                   "Chance to avoid incoming damage.",
+
   "effect.simplyskills.rampage":                        "Rampage",
   "effect.simplyskills.rampage.desc":                   "Grants you random buffs when you take damage.",
+  "effect.simplyskills.rampage.description":                   "Grants you random buffs when you take damage.",
+
   "effect.simplyskills.siphoning_strikes":              "Siphoning Strikes",
   "effect.simplyskills.arrow_rain":                     "Arrow Rain",
   "effect.simplyskills.arrow_rain.desc":                "Your next fully charged bow attack calls down a rain of arrows at the target location.",
+  "effect.simplyskills.arrow_rain.description":                "Your next fully charged bow attack calls down a rain of arrows at the target location.",
+
   "effect.simplyskills.arcane_volley":                  "Arcane Volley",
   "effect.simplyskills.arcane_volley.desc":             "Periodically fire Arcane bolts at your target.",
+  "effect.simplyskills.arcane_volley.description":             "Periodically fire Arcane bolts at your target.",
+
   "effect.simplyskills.frost_volley":                   "Frost Volley",
   "effect.simplyskills.frost_volley.desc":              "Periodically fire Frost bolts at your target.",
+  "effect.simplyskills.frost_volley.description":              "Periodically fire Frost bolts at your target.",
+
   "effect.simplyskills.meteoric_wrath":                 "Meteoric Wrath",
   "effect.simplyskills.meteoric_wrath.desc":            "Periodically summon meteors above nearby hostiles.",
+  "effect.simplyskills.meteoric_wrath.description":            "Periodically summon meteors above nearby hostiles.",
+
   "effect.simplyskills.static_charge":                  "Static Charge",
   "effect.simplyskills.disenchantment":                 "Disenchantment",
   "effect.simplyskills.disenchantment.desc":            "Periodically lose buffs.",
+  "effect.simplyskills.disenchantment.description":            "Periodically lose buffs.",
+
   "effect.simplyskills.leapslam":                       "Leap Slam",
   "effect.simplyskills.elemental_impact":               "Elemental Impact",
   "effect.simplyskills.fanofblades":                    "Fan of Blades",
   "effect.simplyskills.bullrush":                       "Bullrush",
   "effect.simplyskills.immobilize":                     "Immobilize",
   "effect.simplyskills.immobilize.desc":                "Inflicts damage and slowness when attempting to move.",
+  "effect.simplyskills.immobilize.description":                "Inflicts damage and slowness when attempting to move.",
+
   "effect.simplyskills.elemental_surge":                "Elemental Surge",
   "effect.simplyskills.spellweaver":                    "Spellweaver",
   "effect.simplyskills.spellweaver.desc":               "Increased chance to Spellweave.",
+  "effect.simplyskills.spellweaver.description":               "Increased chance to Spellweave.",
+
   "effect.simplyskills.immobilizing_aura":              "Immobilizing Aura",
   "effect.simplyskills.immobilizing_aura.desc":         "Inflict nearby enemies with Immobilize.",
+  "effect.simplyskills.immobilizing_aura.description":         "Inflict nearby enemies with Immobilize.",
+
   "effect.simplyskills.spellbreaking":                  "Spellbreaking",
   "effect.simplyskills.spellbreaking_desc":             "Explode incoming spell projectiles.",
+  "effect.simplyskills.spellbreaking_description":             "Explode incoming spell projectiles.",
+
   "effect.simplyskills.earthshaker":                    "Earthshaker",
   "effect.simplyskills.earthshaker.desc":               "Deal area damage when landing.",
+  "effect.simplyskills.earthshaker.description":               "Deal area damage when landing.",
+
   "effect.simplyskills.arcane_attunement":              "Arcane Attunement",
   "effect.simplyskills.arcane_attunement.desc":         "Grants 2% Arcane Spell Power per stack.",
+  "effect.simplyskills.arcane_attunement.description":         "Grants 2% Arcane Spell Power per stack.",
+
   "effect.simplyskills.soul_attunement":                "Soul Attunement",
   "effect.simplyskills.soul_attunement.desc":           "Grants 2% Soul Spell Power per stack.",
+  "effect.simplyskills.soul_attunement.description":           "Grants 2% Soul Spell Power per stack.",
+
   "effect.simplyskills.holy_attunement":                "Holy Attunement",
   "effect.simplyskills.holy_attunement.desc":           "Grants 2% Healing Spell Power per stack.",
+  "effect.simplyskills.holy_attunement.description":           "Grants 2% Healing Spell Power per stack.",
+
   "effect.simplyskills.fire_attunement":                "Fire Attunement",
   "effect.simplyskills.fire_attunement.desc":           "Grants 2% Fire Spell Power per stack.",
+  "effect.simplyskills.fire_attunement.description":           "Grants 2% Fire Spell Power per stack.",
+
   "effect.simplyskills.frost_attunement":               "Frost Attunement",
   "effect.simplyskills.frost_attunement.desc":          "Grants 2% Frost Spell Power per stack.",
+  "effect.simplyskills.frost_attunement.description":          "Grants 2% Frost Spell Power per stack.",
+
   "effect.simplyskills.lightning_attunement":           "Lightning Attunement",
   "effect.simplyskills.lightning_attunement.desc":      "Grants 2% Lightning Spell Power per stack.",
+  "effect.simplyskills.lightning_attunement.description":      "Grants 2% Lightning Spell Power per stack.",
+
   "effect.simplyskills.precision":                      "Precision",
   "effect.simplyskills.precision.desc":                 "Grants 2% Spell critical damage and critical chance per stack.",
+  "effect.simplyskills.precision.description":                 "Grants 2% Spell critical damage and critical chance per stack.",
+
   "effect.simplyskills.death_mark":                     "Death Mark",
   "effect.simplyskills.death_mark.desc":                "Healing and Resistance reduced by %25 per stack.",
+  "effect.simplyskills.death_mark.description":                "Healing and Resistance reduced by %25 per stack.",
+
   "effect.simplyskills.marksman":                       "Marksman",
   "effect.simplyskills.marksman.desc":                  "Your next fully charged bow attack fires a marksman arrow.",
+  "effect.simplyskills.marksman.description":                  "Your next fully charged bow attack fires a marksman arrow.",
+
   "effect.simplyskills.stealth":                        "Stealth",
   "effect.simplyskills.stealth.desc":                   "Grants total invisibility. Effect ends when receiving or dealing damage.",
+  "effect.simplyskills.stealth.description":                   "Grants total invisibility. Effect ends when receiving or dealing damage.",
+
   "effect.simplyskills.might":                          "Might",
   "effect.simplyskills.might.desc":                     "Grants 10% increased Melee Damage per stack.",
+  "effect.simplyskills.might.description":                     "Grants 10% increased Melee Damage per stack.",
+
   "effect.simplyskills.exhaustion":                     "Exhaustion",
   "effect.simplyskills.exhaustion.desc":                "Lose 1% attack damage, attack speed, and move speed per stack.",
+  "effect.simplyskills.exhaustion.description":                "Lose 1% attack damage, attack speed, and move speed per stack.",
+
   "effect.simplyskills.revealed":                       "Revealed",
   "effect.simplyskills.revealed.desc":                  "You cannot enter Stealth.",
+  "effect.simplyskills.revealed.description":                  "You cannot enter Stealth.",
+
   "effect.simplyskills.barrier":                        "Barrier",
   "effect.simplyskills.barrier.desc":                   "Completely negate the next incoming damage.",
+  "effect.simplyskills.barrier.description":                   "Completely negate the next incoming damage.",
+
   "effect.simplyskills.soulshock":                      "Soulshock",
   "effect.simplyskills.soulshock.desc":                 "Grants +1 Soul & Lightning Spell Power per stack.",
+  "effect.simplyskills.soulshock.description":                 "Grants +1 Soul & Lightning Spell Power per stack.",
+
   "effect.simplyskills.spellforged":                    "Spellforged",
   "effect.simplyskills.spellforged.desc":               "Grants +0.25 to all Spell Power per stack.",
+  "effect.simplyskills.spellforged.description":               "Grants +0.25 to all Spell Power per stack.",
+
   "effect.simplyskills.divine_adjudication":            "Divine Adjudication",
   "effect.simplyskills.divine_adjudication.desc":       "Periodically cast Judgement on nearby hostiles.",
+  "effect.simplyskills.divine_adjudication.description":       "Periodically cast Judgement on nearby hostiles.",
+
   "effect.simplyskills.sacred_onslaught":               "Sacred Onslaught",
   "effect.simplyskills.consecration":                   "Consecration",
   "effect.simplyskills.consecration.desc":              "Consecrate the ground beneath your feet.",
+  "effect.simplyskills.consecration.description":              "Consecrate the ground beneath your feet.",
+
   "effect.simplyskills.taunted":                        "Taunted",
   "effect.simplyskills.taunted.desc":                   "Only capable of targeting the taunting entity.",
+  "effect.simplyskills.taunted.description":                   "Only capable of targeting the taunting entity.",
+
   "effect.simplyskills.undying":                        "Undying",
   "effect.simplyskills.undying.desc":                   "You cannot drop below 1HP. If you are below 65% HP when the effect ends, take fatal damage.",
+  "effect.simplyskills.undying.description":                   "You cannot drop below 1HP. If you are below 65% HP when the effect ends, take fatal damage.",
+
   "effect.simplyskills.rage":                           "Rage",
   "effect.simplyskills.rage.desc":                      "Gain 0.5% attack damage, attack speed, and damage received per stack.",
+  "effect.simplyskills.rage.description":                      "Gain 0.5% attack damage, attack speed, and damage received per stack.",
+
   "effect.simplyskills.overload":                       "Overload",
   "effect.simplyskills.overload.desc":                  "Grants you 75% increased spell crit damage & 10% spell crit chance per stack.\nUpon exceeding 5 stacks you overload, dealing significant damage to yourself and nearby enemies.\n\nThe damage dealt to enemies is scaled by your max HP and Soul spell power.",
+  "effect.simplyskills.overload.description":                  "Grants you 75% increased spell crit damage & 10% spell crit chance per stack.\nUpon exceeding 5 stacks you overload, dealing significant damage to yourself and nearby enemies.\n\nThe damage dealt to enemies is scaled by your max HP and Soul spell power.",
+
   "effect.simplyskills.bladestorm":                     "Bladestorm",
   "effect.simplyskills.bladestorm.desc":                "Causes daggers to rotate around you, dealing damage to nearby enemies. Each stack of Bladestorm increases its attack frequency and grants you 1% additional evasion chance.",
+  "effect.simplyskills.bladestorm.description":                "Causes daggers to rotate around you, dealing damage to nearby enemies. Each stack of Bladestorm increases its attack frequency and grants you 1% additional evasion chance.",
+
   "effect.simplyskills.anointed":                       "Anointed",
   "effect.simplyskills.anointed.desc":                  "Melee attacks heal nearby allies, and deal AoE damage scaling with your Healing spell power.",
+  "effect.simplyskills.anointed.description":                  "Melee attacks heal nearby allies, and deal AoE damage scaling with your Healing spell power.",
+
   "effect.simplyskills.vitality_bond":                  "Vitality Bond",
   "effect.simplyskills.vitality_bond.desc":             "HP synchronised with the other affected entity.",
+  "effect.simplyskills.vitality_bond.description":             "HP synchronised with the other affected entity.",
+
   "effect.simplyskills.marksmanship":                   "Marksmanship",
   "effect.simplyskills.marksmanship.desc":              "Grants 10% increased Ranged Damage per stack.",
+  "effect.simplyskills.marksmanship.description":              "Grants 10% increased Ranged Damage per stack.",
+
   "effect.simplyskills.agile":                          "Agile",
   "effect.simplyskills.agile.desc":                     "Grants 5% increased attack speed, movespeed, spell haste, and ranged damage per stack.",
+  "effect.simplyskills.agile.description":                     "Grants 5% increased attack speed, movespeed, spell haste, and ranged damage per stack.",
+
   "effect.simplyskills.bone_armor":                     "Bone Armor",
   "effect.simplyskills.bone_armor.desc":                "Grants 10% increased armor & armor toughness per bone. A bone is lost when hit",
+  "effect.simplyskills.bone_armor.description":                "Grants 10% increased armor & armor toughness per bone. A bone is lost when hit",
+
   "effect.simplyskills.righteous_hammers":              "Righteous Hammers",
   "effect.simplyskills.righteous_hammers.desc":         "Grants 2% increased melee damage per hammer and damages nearby enemies.",
+  "effect.simplyskills.righteous_hammers.description":         "Grants 2% increased melee damage per hammer and damages nearby enemies.",
+
   "effect.simplyskills.cyclonic_cleave":                "Cyclonic Cleave",
   "effect.simplyskills.cyclonic_cleave.desc":           "Performing a Cyclonic Cleave.",
+  "effect.simplyskills.cyclonic_cleave.description":           "Performing a Cyclonic Cleave.",
+
   "effect.simplyskills.cataclysm":                      "Cataclysm",
   "effect.simplyskills.cataclysm.desc":                 "Casting a powerful spell.",
+  "effect.simplyskills.cataclysm.description":                 "Casting a powerful spell.",
+
   "effect.simplyskills.rapidfire":                      "Rapidfire",
   "effect.simplyskills.rapidfire.desc":                 "Performing Rapidfire.",
+  "effect.simplyskills.rapidfire.description":                 "Performing Rapidfire.",
+
   "effect.simplyskills.torment":                        "Torment",
   "effect.simplyskills.torment.desc":                   "Cursed with Torment.",
+  "effect.simplyskills.torment.description":                   "Cursed with Torment.",
+
   "effect.simplyskills.agony":                          "Agony",
   "effect.simplyskills.agony.desc":                     "Cursed with Agony.",
+  "effect.simplyskills.agony.description":                     "Cursed with Agony.",
+
   "effect.simplyskills.arcane_slash":                   "Arcane Slash",
   "effect.simplyskills.arcane_slash.desc":              "Performing an Arcane Slash.",
+  "effect.simplyskills.arcane_slash.description":              "Performing an Arcane Slash.",
+
   "effect.simplyskills.magic_circle":                   "Magic Circle",
   "effect.simplyskills.magic_circle.desc":              "Empowered by a magic circle.",
+  "effect.simplyskills.magic_circle.description":              "Empowered by a magic circle.",
+
   "effect.simplyskills.golden_aegis":                   "Golden Aegis",
   "effect.simplyskills.golden_aegis.desc":              "Generating holy power.",
+  "effect.simplyskills.golden_aegis.description":              "Generating holy power.",
+
   "effect.simplyskills.righteous_shield":               "Righteous Shield",
   "effect.simplyskills.righteous_shield.desc":          "Performing Righteous Shield.",
+  "effect.simplyskills.righteous_shield.description":          "Performing Righteous Shield.",
+
   "effect.simplyskills.shadow_aura":                    "Shadow Aura",
   "effect.simplyskills.shadow_aura.desc":               "Lashes out at nearby enemies, but drains user HP.",
+  "effect.simplyskills.shadow_aura.description":               "Lashes out at nearby enemies, but drains user HP.",
+
   "effect.simplyskills.focus":                          "Focus",
   "effect.simplyskills.focus.desc":                     "Your next bow attack charges slower and does more damage.",
+  "effect.simplyskills.focus.description":                     "Your next bow attack charges slower and does more damage.",
+
   "effect.simplyskills.warriors_devotion":              "Warrior's Devotion",
   "effect.simplyskills.warriors_devotion.desc":         "Attack slower and deal increased damage when wielding a single weapon.",
+  "effect.simplyskills.warriors_devotion.description":         "Attack slower and deal increased damage when wielding a single weapon.",
+
 
 
   "item.simplyskills.malevolent_manuscript":            "Malevolent Manuscript",
@@ -221,6 +333,8 @@
   "text.autoconfig.simplyskills.option.client.enableDASDebugLog.@Tooltip" :                                   "Provides a log output of DAS analytics.",
   "text.autoconfig.simplyskills.option.client.DASHealth" :                                                    "DAS Max Health",
   "text.autoconfig.simplyskills.option.client.DASHealth.@Tooltip" :                                           "The amount of health to add (multiplied by skill points spent)",
+  "text.autoconfig.simplyskills.option.client.DASHealthAddMulti" :                                                    "DAS additional Max Health multiplier",
+  "text.autoconfig.simplyskills.option.client.DASHealthAddMulti.@Tooltip" :                                           "An additional multiplier that will only be in effect if the entity base health is higher than the value set for 'DAS Additional Multiplier HP Requirement'",
   "text.autoconfig.simplyskills.option.client.DASRadius" :                                                    "DAS Radius",
   "text.autoconfig.simplyskills.option.client.DASRadius.@Tooltip" :                                           "The maximum radius DAS will check for players from the entity's position.(High numbers may impact performance)",
   "text.autoconfig.simplyskills.option.client.DASUpdateFrequency" :                                           "DAS Update Frequency (In Seconds)",
@@ -229,16 +343,28 @@
   "text.autoconfig.simplyskills.option.client.DASPlayerScalingWeight.@Tooltip" :                              "Controls the weight each successive player has on the attribute scaling. The lower this number, the less impact each successive player will have on the scaling.",
   "text.autoconfig.simplyskills.option.client.DASPassiveEntityModifier" :                                     "DAS Passive Entity Modifier",
   "text.autoconfig.simplyskills.option.client.DASPassiveEntityModifier.@Tooltip" :                            "Modifies the total scaling of DAS for Passive Entities (Cows, chickens, sheep, etc). A Lower value means less scaling. Range: 0.0 -> 1.0",
+  "text.autoconfig.simplyskills.option.client.addMultiHealthRequirement" :                                                    "DAS Additional Multiplier HP Requirement",
+  "text.autoconfig.simplyskills.option.client.addMultiHealthRequirement.@Tooltip" :                                           "If entity base health is higher than this value, additional attribute multipliers will be enabled. This allows you to scale boss entities further than ordinary mobs.",
   "text.autoconfig.simplyskills.option.client.DASAttack" :                                                    "DAS Attack",
   "text.autoconfig.simplyskills.option.client.DASAttack.@Tooltip" :                                           "The amount of attack to add (multiplied by skill points spent)",
+  "text.autoconfig.simplyskills.option.client.DASAttackAddMulti" :                                                    "DAS additional Attack multiplier",
+  "text.autoconfig.simplyskills.option.client.DASAttackAddMulti.@Tooltip" :                                           "An additional multiplier that will only be in effect if the entity base health is higher than the value set for 'DAS Additional Multiplier HP Requirement'",
   "text.autoconfig.simplyskills.option.client.DASArmor" :                                                     "DAS Armor",
   "text.autoconfig.simplyskills.option.client.DASArmor.@Tooltip" :                                            "The amount of armor to add (multiplied by skill points spent)",
+  "text.autoconfig.simplyskills.option.client.DASArmorAddMulti" :                                                    "DAS additional Armor multiplier",
+  "text.autoconfig.simplyskills.option.client.DASArmorAddMulti.@Tooltip" :                                           "An additional multiplier that will only be in effect if the entity base health is higher than the value set for 'DAS Additional Multiplier HP Requirement'",
   "text.autoconfig.simplyskills.option.client.DASArmorToughness" :                                            "DAS Armor Toughness",
   "text.autoconfig.simplyskills.option.client.DASArmorToughness.@Tooltip" :                                   "The amount of armor toughness to add (multiplied by skill points spent)",
+  "text.autoconfig.simplyskills.option.client.DASToughnessAddMulti" :                                                    "DAS additional Armor Toughness multiplier",
+  "text.autoconfig.simplyskills.option.client.DASToughnessAddMulti.@Tooltip" :                                           "An additional multiplier that will only be in effect if the entity base health is higher than the value set for 'DAS Additional Multiplier HP Requirement'",
   "text.autoconfig.simplyskills.option.client.DASSpeed" :                                                     "DAS Movespeed",
   "text.autoconfig.simplyskills.option.client.DASSpeed.@Tooltip" :                                            "The amount of movespeed to add (multiplied by skill points spent)",
+  "text.autoconfig.simplyskills.option.client.DASSpeedAddMulti" :                                                    "DAS additional Movespeed multiplier",
+  "text.autoconfig.simplyskills.option.client.DASSpeedAddMulti.@Tooltip" :                                           "An additional multiplier that will only be in effect if the entity base health is higher than the value set for 'DAS Additional Multiplier HP Requirement'",
   "text.autoconfig.simplyskills.option.client.DASKnockbackResist" :                                           "DAS Knockback Resistance",
   "text.autoconfig.simplyskills.option.client.DASKnockbackResist.@Tooltip" :                                  "The amount of knockback resistance to add (multiplied by skill points spent)",
+  "text.autoconfig.simplyskills.option.client.DASResistAddMulti" :                                                    "DAS additional Knockback Resistance multiplier",
+  "text.autoconfig.simplyskills.option.client.DASResistAddMulti.@Tooltip" :                                           "An additional multiplier that will only be in effect if the entity base health is higher than the value set for 'DAS Additional Multiplier HP Requirement'",
 
   "text.autoconfig.simplyskills.option.client.innerLineR" :                                                   "Connection inner color RED",
   "text.autoconfig.simplyskills.option.client.innerLineR.@Tooltip" :                                          "The RED inner color for the connection line that renders between skill nodes. Values are RGB.",

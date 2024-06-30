@@ -28,7 +28,8 @@ public class GraciousManuscript extends Item {
             if (HelperMethods.levelAll(serverUser)) {
                 user.swingHand(hand);
                 world.playSound(null, user.getBlockPos(), SoundRegistry.SOUNDEFFECT12, SoundCategory.PLAYERS, 0.5f, 1.0f);
-                user.getStackInHand(hand).decrement(1);
+                //user.getStackInHand(hand).decrement(1);
+                serverUser.getItemCooldownManager().set(this, 60);
             }
         }
         return super.use(world,user,hand);
