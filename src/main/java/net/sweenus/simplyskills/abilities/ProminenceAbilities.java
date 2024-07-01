@@ -17,7 +17,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.Box;
-import net.puffish.skillsmod.api.SkillsAPI;
 import net.sweenus.simplyskills.SimplySkills;
 import net.sweenus.simplyskills.effects.instance.SimplyStatusEffectInstance;
 import net.sweenus.simplyskills.registry.EffectRegistry;
@@ -121,9 +120,13 @@ public class ProminenceAbilities {
     public static void warriorsDevotion(PlayerEntity player) {
         if (player.age % 20 == 0 && HelperMethods.isUnlocked("puffish_skills:prom", SkillReferencePosition.promWarriorsDevotion, player)) {
             if (player.getMainHandStack().isEmpty() || player.getOffHandStack().isEmpty()) {
-                player.addStatusEffect(new StatusEffectInstance(EffectRegistry.WARRIORSDEVOTION, 30, 0, false, false, true));
+                player.addStatusEffect(new StatusEffectInstance(EffectRegistry.TITANSGRIP, 30, 0, false, false, true));
             }
        }
+    }
+
+    public static float melodyOfProtection(float amount) {
+        return amount - (amount / 10);
     }
 
 }

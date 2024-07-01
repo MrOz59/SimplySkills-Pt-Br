@@ -154,7 +154,7 @@ public class WarriorAbilities {
 
     public static void passiveWarriorSwordfall(PlayerEntity player, LivingEntity target) {
         int effectChance = SimplySkills.warriorConfig.passiveWarriorSwordfallChance;
-        if (FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.WARRIORSDEVOTION))
+        if (FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.TITANSGRIP))
             effectChance = effectChance * 2;
         else if (!FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.MIGHT))
             effectChance = effectChance * 2;

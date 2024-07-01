@@ -11,6 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Box;
+import net.sweenus.simplyskills.registry.EffectRegistry;
 import net.sweenus.simplyskills.util.HelperMethods;
 import org.jetbrains.annotations.Nullable;
 
@@ -23,8 +24,8 @@ public class ProminenceInternalAbilities {
         ItemStack stack = player.getMainHandStack();
         Item item = stack.getItem();
         int radius = 4;
-        int frequency = 40;
-        int duration = frequency + 20;
+        int frequency = 30;
+        int duration = frequency + 10;
 
         if (item instanceof InstrumentItem instrument) {
 
@@ -32,19 +33,19 @@ public class ProminenceInternalAbilities {
                 return;
 
             if (stack.isOf(Items.BAGPIPE.get())) {
-                giveAreaBuffs(player, radius, frequency, duration, StatusEffects.STRENGTH, 2, StatusEffects.REGENERATION, 0, null, 0, null, 0);
+                giveAreaBuffs(player, radius, frequency, duration, EffectRegistry.MELODYOFWAR, 0, StatusEffects.REGENERATION, 0, null, 0, null, 0);
             } else if (stack.isOf(Items.FLUTE.get())) {
-                giveAreaBuffs(player, radius, frequency, duration, StatusEffects.SPEED, 2, StatusEffects.DOLPHINS_GRACE, 0, null, 0, null, 0);
+                giveAreaBuffs(player, radius, frequency, duration, EffectRegistry.MELODYOFSWIFTNESS, 0, StatusEffects.DOLPHINS_GRACE, 0, null, 0, null, 0);
             } else if (stack.isOf(Items.DIDGERIDOO.get())) {
-            giveAreaBuffs(player, radius, frequency, duration, StatusEffects.RESISTANCE, 1, StatusEffects.STRENGTH, 0, null, 0, null, 0);
+            giveAreaBuffs(player, radius, frequency, duration, EffectRegistry.MELODYOFPROTECTION, 0, StatusEffects.STRENGTH, 0, null, 0, null, 0);
             } else if (stack.isOf(Items.LUTE.get())) {
-                giveAreaBuffs(player, radius, frequency, duration, StatusEffects.REGENERATION, 2, StatusEffects.ABSORPTION, 0, null, 0, null, 0);
+                giveAreaBuffs(player, radius, frequency, duration, EffectRegistry.MELODYOFSAFETY, 0, null, 0, null, 0, null, 0);
             } else if (stack.isOf(Items.PIANO.get())) {
-                giveAreaBuffs(player, radius, frequency, duration, StatusEffects.HASTE, 2, StatusEffects.SPEED, 0, null, 0, null, 0);
+                giveAreaBuffs(player, radius, frequency, duration, EffectRegistry.MELODYOFCONCENTRATION, 0, null, 0, null, 0, null, 0);
             } else if (stack.isOf(Items.TRIANGLE.get())) {
-                giveAreaBuffs(player, radius, frequency, duration, StatusEffects.SLOW_FALLING, 0, StatusEffects.FIRE_RESISTANCE, 0, null, 0, null, 0);
+                giveAreaBuffs(player, radius, frequency, duration, EffectRegistry.MELODYOFBLOODLUST, 0, null, 0, null, 0, null, 0);
             } else if (stack.isOf(Items.TRUMPET.get())) {
-                giveAreaBuffs(player, radius, frequency, duration, StatusEffects.HASTE, 2, StatusEffects.STRENGTH, 0, null, 0, null, 0);
+                giveAreaBuffs(player, radius, frequency, duration, EffectRegistry.MELODYOFWAR, 0, StatusEffects.REGENERATION, 0, null, 0, null, 0);
             }
 
         }
@@ -57,7 +58,7 @@ public class ProminenceInternalAbilities {
             int buffDuration,
             StatusEffect buffOne,
             int buffOneAmp,
-            StatusEffect buffTwo,
+            @Nullable StatusEffect buffTwo,
             int buffTwoAmp,
             @Nullable StatusEffect debuffOne,
             int debuffOneAmp,
@@ -66,6 +67,14 @@ public class ProminenceInternalAbilities {
 
         if (player.age % tickFrequency != 0) {
             return;
+        }
+        if (player.hasStatusEffect(buffOne)) {
+            StatusEffectInstance statusEffectInstance = player.getStatusEffect(buffOne);
+            if (statusEffectInstance != null) {
+                int duration = statusEffectInstance.getDuration();
+                buffDuration += duration;
+                if (buffDuration > 10) buffDuration = 10;
+            }
         }
 
         Box box = HelperMethods.createBox(player, radius);
@@ -80,7 +89,8 @@ public class ProminenceInternalAbilities {
                 // Apply buffs
                 if (isFriendly) {
                     le.addStatusEffect(new StatusEffectInstance(buffOne, buffDuration, buffOneAmp, false, false, true));
-                    le.addStatusEffect(new StatusEffectInstance(buffTwo, buffDuration, buffTwoAmp, false, false, true));
+                    if (buffTwo != null)
+                        le.addStatusEffect(new StatusEffectInstance(buffTwo, buffDuration, buffTwoAmp, false, false, true));
                 }
 
                 // Apply debuffs if they are not null

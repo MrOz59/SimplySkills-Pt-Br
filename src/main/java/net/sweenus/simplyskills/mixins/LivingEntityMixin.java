@@ -4,6 +4,7 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.sweenus.simplyskills.SimplySkills;
+import net.sweenus.simplyskills.abilities.ProminenceAbilities;
 import net.sweenus.simplyskills.registry.EffectRegistry;
 import net.sweenus.simplyskills.util.DynamicDamage;
 import org.jetbrains.annotations.Nullable;
@@ -52,6 +53,17 @@ public abstract class LivingEntityMixin {
         LivingEntity livingEntity = (LivingEntity) (Object)this;
 
         float newAmount = DynamicDamage.dynamicDamageReduction(attacker, livingEntity, amount, lastDamageTaken, cir.getReturnValue(), lastDamageTime);
+
+        //Prom Melody damage buffs
+        if (attacker != null) {
+            if (attacker.hasStatusEffect(EffectRegistry.MELODYOFWAR)) {
+                newAmount = newAmount + (newAmount * 0.10f);
+            }
+            if (attacker.hasStatusEffect(EffectRegistry.MELODYOFBLOODLUST)) {
+                newAmount = newAmount + (newAmount * 0.05f);
+            }
+        }
+
         if (newAmount != amount)
             cir.setReturnValue(newAmount);
 

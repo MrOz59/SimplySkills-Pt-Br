@@ -2,6 +2,7 @@ package net.sweenus.simplyskills.abilities;
 
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -244,14 +245,143 @@ public class AbilityLogic {
                 ClericAbilities.passiveClericHealingWard(player, targets, spellId);
             }
 
-            if (school.id.toString().contains("physical_melee")) {
+            if (school.id.toString().contains("physical_ranged")) {
                 if (HelperMethods.isUnlocked("simplyskills:tree", SkillReferencePosition.wayfarerQuickfire, player))
                     HelperMethods.incrementStatusEffect(player, EffectRegistry.MARKSMANSHIP, 40, 1, 6);
                 AbilityEffects.effectRangerElementalArrows(player);
             }
+
+            if (school.id.toString().contains("physical_melee") && targets != null) {
+                for (Entity target : targets) {
+                    if (target instanceof LivingEntity) {
+                        doMeleeOnHit((ServerPlayerEntity) player, target);
+                    }
+                }
+            }
+
             CrusaderAbilities.signatureHeavensmithsCallImpact("simplyskills:crusader", targets, spellId, player);
         }
+    }
 
+    public static void doMeleeOnHit(ServerPlayerEntity player, Entity target) {
+        //Passive Rogue Backstab
+        if (HelperMethods.isUnlocked("simplyskills:rogue",
+                SkillReferencePosition.rogueBackstab, player)) {
+            RogueAbilities.passiveRogueBackstab(target, player);
+        }
+
+        //Passive Rogue Opportunistic Mastery
+        if (HelperMethods.isUnlocked("simplyskills:rogue",
+                SkillReferencePosition.rogueOpportunisticMastery, player)) {
+            RogueAbilities.passiveRogueOpportunisticMastery(target, player);
+        }
+
+        //Effect Warrior Frenzy
+        if (HelperMethods.isUnlocked("simplyskills:tree",
+                SkillReferencePosition.warriorFrenzy, player)) {
+            WarriorAbilities.passiveWarriorFrenzy(player);
+        }
+
+        //Initiate Frail (weapon element)
+        if (HelperMethods.isUnlocked("simplyskills:tree",
+                SkillReferencePosition.initiateFrail, player)
+                && !HelperMethods.isUnlocked("simplyskills:spellblade",
+                SkillReferencePosition.spellbladeWeaponExpert, player)) {
+            InitiateAbilities.passiveInitiateFrail(player);
+        }
+
+        //Signature Passive Elemental Surge Renewal
+        if (HelperMethods.isUnlocked("simplyskills:spellblade",
+                SkillReferencePosition.spellbladeSpecialisationElementalSurgeRenewal, player)) {
+            if (player.hasStatusEffect(EffectRegistry.ELEMENTALSURGE)) {
+                int surgeDuration = player.getStatusEffect(EffectRegistry.ELEMENTALSURGE).getDuration();
+                player.removeStatusEffect(EffectRegistry.ELEMENTALSURGE);
+                player.addStatusEffect(new StatusEffectInstance(EffectRegistry.ELEMENTALSURGE, surgeDuration+3, 0, false, false, true));
+            }
+        }
+
+        //Effect Bloodthirsty Tremor
+        if (HelperMethods.isUnlocked("simplyskills:berserker",
+                SkillReferencePosition.berserkerSpecialisationBloodthirstyTremor, player)) {
+            AbilityEffects.effectBerserkerBloodthirstyTremor(player);
+        }
+
+        //Effect Bloodthirsty Tireless
+        if (HelperMethods.isUnlocked("simplyskills:berserker",
+                SkillReferencePosition.berserkerSpecialisationBloodthirstyTireless, player)) {
+            AbilityEffects.effectBerserkerBloodthirstyTireless(player);
+        }
+
+        //Effect Berserking
+        if (HelperMethods.isUnlocked("simplyskills:berserker",
+                SkillReferencePosition.berserkerSpecialisationBerserking, player)) {
+            AbilityEffects.effectBerserkerBerserking(target, player);
+        }
+
+        //Effect Siphoning Strikes
+        if (HelperMethods.isUnlocked("simplyskills:rogue",
+                SkillReferencePosition.rogueSpecialisationSiphoningStrikes, player)) {
+            AbilityEffects.effectRogueSiphoningStrikes(target, player);
+        }
+
+        //Effect Rogue Vanish
+        if (HelperMethods.isUnlocked("simplyskills:rogue",
+                SkillReferencePosition.rogueSpecialisationSiphoningStrikesVanish, player)) {
+            AbilityEffects.effectRogueSiphoningStrikesVanish(player);
+        }
+
+        //Effect Spell Weaving
+        if (HelperMethods.isUnlocked("simplyskills:spellblade",
+                SkillReferencePosition.spellbladeSpellweaving, player)) {
+            AbilityEffects.effectSpellbladeSpellweaving(target, player);
+        }
+
+        //Effect Stealth
+        if (player.hasStatusEffect(EffectRegistry.STEALTH)) {
+            WayfarerAbilities.passiveWayfarerBreakStealth(target, player, false, true);
+        }
+
+        //Passive Rage
+        if (HelperMethods.isUnlocked("simplyskills:tree",
+                SkillReferencePosition.berserkerPath, player)) {
+            HelperMethods.incrementStatusEffect(player, EffectRegistry.RAGE, 300, 1, 99);
+        }
+
+        //Passive Berserker Exploit
+        if (HelperMethods.isUnlocked("simplyskills:berserker",
+                SkillReferencePosition.berserkerExploit, player)) {
+            BerserkerAbilities.passiveBerserkerExploit(target);
+        }
+
+        //Passive Warrior Twinstrike
+        if (HelperMethods.isUnlocked("simplyskills:tree",
+                SkillReferencePosition.warriorTwinstrike, player)
+                && target instanceof LivingEntity livingTarget) {
+            WarriorAbilities.passiveWarriorTwinstrike(player, livingTarget);
+        }
+        //Passive Prom Twinstrike
+        if (FabricLoader.getInstance().isModLoaded("prominence")
+                && HelperMethods.isUnlocked("puffish_skills:prom",
+                SkillReferencePosition.warriorTwinstrike, player)
+                && target instanceof LivingEntity livingTarget) {
+            ProminenceAbilities.promTwinstrike(player, livingTarget);
+        }
+
+        //Passive Warrior Swordfall
+        if (target instanceof LivingEntity livingTarget) {
+            if (HelperMethods.isUnlocked("simplyskills:tree",
+                    SkillReferencePosition.warriorSwordfall, player)
+                    || (FabricLoader.getInstance().isModLoaded("prominent")
+                    && HelperMethods.isUnlocked("puffish_skills:prom",
+                    SkillReferencePosition.warriorSwordfall, player)))
+                WarriorAbilities.passiveWarriorSwordfall(player, livingTarget);
+        }
+
+        //Signature Cleric Anoint Weapon
+        if (player.hasStatusEffect(EffectRegistry.ANOINTED)
+                && FabricLoader.getInstance().isModLoaded("paladins")) {
+            ClericAbilities.signatureClericAnointWeaponEffect(player);
+        }
     }
 
 }

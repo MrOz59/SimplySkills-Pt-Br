@@ -9,11 +9,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.puffish.attributesmod.AttributesMod;
-import net.spell_engine.SpellEngineMod;
 import net.spell_engine.api.effect.ActionImpairing;
 import net.spell_engine.api.effect.EntityActionsAllowed;
 import net.spell_engine.api.effect.Synchronized;
-import net.spell_power.api.SpellPower;
 import net.spell_power.api.SpellPowerMechanics;
 import net.spell_power.api.SpellSchools;
 import net.sweenus.simplyskills.SimplySkills;
@@ -275,14 +273,37 @@ public class EffectRegistry {
                     "127a2308-5cd7-4b28-b52d-71cde1d2a9da",
                     0.2,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
-    public static StatusEffect WARRIORSDEVOTION= new WarriorsDevotionEffect(StatusEffectCategory.BENEFICIAL, 3124687)
+    public static StatusEffect TITANSGRIP= new TitansGripEffect(StatusEffectCategory.BENEFICIAL, 3124687)
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
                     "53044215-cfb0-4a01-a33e-3bda11fab913",
-                    0.9,
+                    1.0,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED,
                     "10d42842-3eb5-44c7-ba5f-a663ba984e66",
-                    -0.5,
+                    -3.0,
+                    EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+
+    public static StatusEffect MELODYOFWAR = new MelodyOfWarEffect(StatusEffectCategory.BENEFICIAL, 3124687);
+    public static StatusEffect MELODYOFSWIFTNESS = new MelodyOfSwiftnessEffect(StatusEffectCategory.BENEFICIAL, 3124687)
+            .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                    "606c3744-d1f4-431f-860b-0092f1d9c32e",
+                    0.30,
+                    EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+    public static StatusEffect MELODYOFPROTECTION = new MelodyOfProtectionEffect(StatusEffectCategory.BENEFICIAL, 3124687);
+    public static StatusEffect MELODYOFSAFETY = new MelodyOfSafetyEffect(StatusEffectCategory.BENEFICIAL, 3124687);
+    public static StatusEffect MELODYOFCONCENTRATION = new MelodyOfConcentrationEffect(StatusEffectCategory.BENEFICIAL, 3124687)
+            .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED,
+                    "bddd1a50-7de3-4e21-bb32-1b562c138927",
+                    0.20,
+                    EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+            .addAttributeModifier(EntityAttributes.GENERIC_MOVEMENT_SPEED,
+                    "6b9d312d-3451-4852-95be-3f7d8c6ec188",
+                    0.10,
+                    EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+    public static StatusEffect MELODYOFBLOODLUST = new MelodyOfBloodlustEffect(StatusEffectCategory.BENEFICIAL, 3124687)
+            .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED,
+                    "c717c9f2-3b18-4ceb-af35-455063b25e2a",
+                    0.20,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
 
     public static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
@@ -381,7 +402,13 @@ public class EffectRegistry {
         GOLDENAEGIS = registerStatusEffect("golden_aegis", GOLDENAEGIS);
         SHADOWAURA = registerStatusEffect("shadow_aura", SHADOWAURA);
         FOCUS = registerStatusEffect("focus", FOCUS);
-        WARRIORSDEVOTION = registerStatusEffect("warriors_devotion", WARRIORSDEVOTION);
+        TITANSGRIP = registerStatusEffect("titans_grip", TITANSGRIP);
+        MELODYOFWAR = registerStatusEffect("melody_of_war", MELODYOFWAR);
+        MELODYOFSWIFTNESS = registerStatusEffect("melody_of_swiftness", MELODYOFSWIFTNESS);
+        MELODYOFPROTECTION = registerStatusEffect("melody_of_protection", MELODYOFPROTECTION);
+        MELODYOFSAFETY = registerStatusEffect("melody_of_safety", MELODYOFSAFETY);
+        MELODYOFCONCENTRATION = registerStatusEffect("melody_of_concentration", MELODYOFCONCENTRATION);
+        MELODYOFBLOODLUST = registerStatusEffect("melody_of_bloodlust", MELODYOFBLOODLUST);
 
         if (FabricLoader.getInstance().isModLoaded("paladins")) {
             CONSECRATION = registerStatusEffect("consecration", CONSECRATION);

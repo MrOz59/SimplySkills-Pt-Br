@@ -4,14 +4,18 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 
-public class WarriorsDevotionEffect extends StatusEffect {
-    public WarriorsDevotionEffect(StatusEffectCategory statusEffectCategory, int color) {
+public class MelodyOfSwiftnessEffect extends StatusEffect {
+    public MelodyOfSwiftnessEffect(StatusEffectCategory statusEffectCategory, int color) {
         super(statusEffectCategory, color);
     }
 
 
     @Override
     public void applyUpdateEffect(LivingEntity livingEntity, int amplifier) {
+        if (!livingEntity.getWorld().isClient()) {
+
+
+        }
         super.applyUpdateEffect(livingEntity, amplifier);
     }
 

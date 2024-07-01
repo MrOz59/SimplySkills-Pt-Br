@@ -233,9 +233,33 @@
   "effect.simplyskills.focus.desc":                     "Your next bow attack charges slower and does more damage.",
   "effect.simplyskills.focus.description":                     "Your next bow attack charges slower and does more damage.",
 
-  "effect.simplyskills.warriors_devotion":              "Warrior's Devotion",
-  "effect.simplyskills.warriors_devotion.desc":         "Attack slower and deal increased damage when wielding a single weapon.",
-  "effect.simplyskills.warriors_devotion.description":         "Attack slower and deal increased damage when wielding a single weapon.",
+  "effect.simplyskills.titans_grip":              "Titan's Grip",
+  "effect.simplyskills.titans_grip.desc":         "Attack slower and deal increased damage when wielding a single weapon.",
+  "effect.simplyskills.titans_grip.description":         "Attack slower and deal increased damage when wielding a single weapon.",
+
+  "effect.simplyskills.melody_of_war":              "Melody of War",
+  "effect.simplyskills.melody_of_war.desc":         "Gain increased damage and regeneration.",
+  "effect.simplyskills.melody_of_war.description":         "Gain increased damage and regeneration.",
+
+  "effect.simplyskills.melody_of_swiftness":              "Melody of Swiftness",
+  "effect.simplyskills.melody_of_swiftness.desc":         "Gain increased movespeed and Dolphin's Grace.",
+  "effect.simplyskills.melody_of_swiftness.description":         "Gain increased movespeed and Dolphin's Grace.",
+
+  "effect.simplyskills.melody_of_protection":              "Melody of Protection",
+  "effect.simplyskills.melody_of_protection.desc":         "Gain Strength and take 10% less damage.",
+  "effect.simplyskills.melody_of_protection.description":         "Gain Strength and take 10% less damage.",
+
+  "effect.simplyskills.melody_of_safety":              "Melody of Safety",
+  "effect.simplyskills.melody_of_safety.desc":         "Recover %10 of Max HP per second.",
+  "effect.simplyskills.melody_of_safety.description":         "Recover %10 of Max HP per second.",
+
+  "effect.simplyskills.melody_of_concentration":              "Melody of Concentration",
+  "effect.simplyskills.melody_of_concentration.desc":         "Gain increased attack speed and movement speed.",
+  "effect.simplyskills.melody_of_concentration.description":         "Gain increased attack speed and movement speed.",
+
+  "effect.simplyskills.melody_of_bloodlust":              "Melody of Bloodlust",
+  "effect.simplyskills.melody_of_bloodlust.desc":         "Gain increased attack speed and damage.",
+  "effect.simplyskills.melody_of_bloodlust.description":         "Gain increased attack speed and damage.",
 
 
 
