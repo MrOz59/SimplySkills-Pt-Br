@@ -261,6 +261,10 @@
   "effect.simplyskills.melody_of_bloodlust.desc":         "Gain increased attack speed and damage.",
   "effect.simplyskills.melody_of_bloodlust.description":         "Gain increased attack speed and damage.",
 
+  "effect.simplyskills.raging_javelin":                          "Raging Javelin",
+  "effect.simplyskills.raging_javelin.desc":                     "Periodically throw your held item at enemies.",
+  "effect.simplyskills.raging_javelin.description":                     "Periodically throw your held item at enemies.",
+
 
 
   "item.simplyskills.malevolent_manuscript":            "Malevolent Manuscript",
@@ -886,7 +890,7 @@
   "text.skills.initiateAttuned.description":"§7When you have 5 or more stacks of attunement, periodically convert them into stacks of Precision.\n\n§f(Precision)§7 Increases spell critical damage and critical chance by §a+2% §f[x]§7 per stack.",
   
   "text.skills.initiateLightningRod.title":"§7§a[Lightning Rod]§7",
-  "text.skills.initiateLightningRod.description":"§7During storms, you periodically gain stacks of Lightning Attunement.\n\n§f(Lightning Attunement)§7 Increases spell damage for lightning magic by §a+2% §f[x]§7 per stack.",
+  "text.skills.initiateLightningRod.description":"§7While under the effects of Soulshock, you periodically discharge electrical energy, damaging and inflicting nearby enemies with weakness.\n\nDuring storms, you periodically gain stacks of Lightning Attunement.\n\n§f(Lightning Attunement)§7 Increases spell damage for lightning magic by §a+2% §f[x]§7 per stack.",
   
   "text.skills.initiateEldritchEnfeeblement.title":"§7§a[Eldritch Enfeeblement]§7",
   "text.skills.initiateEldritchEnfeeblement.description":"§7Your spell damage is increased by §a+5% §f[x]§7, but your movespeed is decreased by §c10% §f[x]§7.\n\nGain a chance equal to your Spell Critical Chance to restore health on spell cast.\nThe amount restored scales with your Spell Critical Damage.",
@@ -928,7 +932,7 @@
   "text.skills.warriorMediumArmorMastery.description":"§7While your armor value is below 15, you have a chance to gain Absorption when hit.",
 
   "text.skills.warriorSpellbreaker.title":"§7§a[Spellbreaker]§7",
-  "text.skills.warriorSpellbreaker.description":"§7When taking damage, you have a chance to gain Spellbreaking for a short duration.\n\n§f(Spellbreaking)§7 causes hostile spell projectiles to explode when in close proximity to you.",
+  "text.skills.warriorSpellbreaker.description":"§7When taking damage, you have a chance to gain Spellbreaking for a short duration.\n\nIn addition, your melee hits have a chance to grant you Raging Javelin for a short duration.\n\n§f(Spellbreaking)§7 causes hostile spell projectiles to explode when in close proximity to you.\n\n§f(Raging Javelin)§7 causes you to periodically throw your held item at nearby enemies.",
 
   "text.skills.warriorGoliath.title":"§7§a[Goliath]§7",
   "text.skills.warriorGoliath.description":"§7When falling long distances, gain Earthshaker.\n\n§f(Earthshaker)§7 causes you to damage and knockback surrounding enemies when landing on the ground. This damage scales with your armor value.",
@@ -937,7 +941,7 @@
   "text.skills.warriorHeavyWeight.description":"§7Your Earthshaker effects are enhanced, causing them to deal additional damage the longer you are in the air.",
   
   "text.skills.warriorBound.title":"§7§a[Bound]§7",
-  "text.skills.warriorBound.description":"§7After activating Earthshaker, you gain Jump Boost for a short duration.",
+  "text.skills.warriorBound.description":"§7After activating Earthshaker, you gain Jump Boost and Raging Javelin for a short duration.\n\n§f(Raging Javelin)§7 causes you to periodically throw your held item at nearby enemies.",
 
   "text.skills.warriorDeathDefy.title":"§7§a[Death Defy]§7",
   "text.skills.warriorDeathDefy.description":"§7When at low HP, you gain Regeneration and Exhaustion relative to your remaining health percent.\n\n§f(Exhaustion)§7 reduces your Melee Attack, Movement Speed, and Attack Speed by §c1% §f[x]§7 per stack.",
@@ -1174,7 +1178,7 @@
   "text.skills.wizardSignatureIceCometDamage+++.description":"§7§6[Ice Comet]§7 Is now larger and deals significantly more damage & knockback.",
   
   "text.skills.wizardSignatureStaticDischarge.title":"Signature Ability: §6[Static Discharge]§7",
-  "text.skills.wizardSignatureStaticDischarge.description":"§7\nReleases a high damage electrical discharge at your target, inflicting them with weakness.\n\n§8[Requires Target]\n\n§a35s Cooldown§7",
+  "text.skills.wizardSignatureStaticDischarge.description":"§7\nReleases a high damage electrical discharge at your target, inflicting them with weakness.\n\n§8[Requires Target]\n\n§a16s Cooldown§7",
   
   "text.skills.wizardSignatureStaticDischargeLightningBall.title":"§f[Ball Lightning]",
   "text.skills.wizardSignatureStaticDischargeLightningBall.description":"§6[Static Discharge]§7 no longer leaps, but instead summons a slow-moving ball of lightning that periodically discharges electricity at nearby hostiles.\n\nAll passives that would usually activate from a leap, now activate when the Lightning Ball discharges at enemies.",

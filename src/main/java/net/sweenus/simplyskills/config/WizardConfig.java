@@ -49,7 +49,7 @@ public class WizardConfig implements ConfigData {
     public int signatureWizardStaticChargeWeaknessDuration = 80;
     public int signatureWizardStaticChargeWeaknessAmplifier = 0;
     public int signatureWizardStaticDischargeRange = 120;
-    public int signatureWizardStaticDischargeCooldown = 35;
+    public int signatureWizardStaticDischargeCooldown = 16;
     @ConfigEntry.Gui.Tooltip
     public int signatureWizardLightningOrbBuffRadius = 15;
     @ConfigEntry.Gui.Tooltip

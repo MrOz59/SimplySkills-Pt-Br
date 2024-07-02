@@ -305,6 +305,7 @@ public class EffectRegistry {
                     "c717c9f2-3b18-4ceb-af35-455063b25e2a",
                     0.20,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
+    public static StatusEffect RAGINGJAVELIN = new RagingJavelinEffect(StatusEffectCategory.BENEFICIAL, 3124687);
 
     public static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(SimplySkills.MOD_ID, name), statusEffect);
@@ -409,6 +410,7 @@ public class EffectRegistry {
         MELODYOFSAFETY = registerStatusEffect("melody_of_safety", MELODYOFSAFETY);
         MELODYOFCONCENTRATION = registerStatusEffect("melody_of_concentration", MELODYOFCONCENTRATION);
         MELODYOFBLOODLUST = registerStatusEffect("melody_of_bloodlust", MELODYOFBLOODLUST);
+        RAGINGJAVELIN = registerStatusEffect("raging_javelin", RAGINGJAVELIN);
 
         if (FabricLoader.getInstance().isModLoaded("paladins")) {
             CONSECRATION = registerStatusEffect("consecration", CONSECRATION);

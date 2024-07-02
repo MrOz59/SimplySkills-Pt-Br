@@ -152,8 +152,10 @@ public abstract class ServerPlayerEntityMixin {
                 && player.fallDistance > goliathActivateDistance && !player.hasStatusEffect(StatusEffects.SLOW_FALLING)) {
             WarriorAbilities.passiveWarriorGoliath(player);
             if (HelperMethods.isUnlocked("simplyskills:tree",
-                    SkillReferencePosition.warriorBound, player))
+                    SkillReferencePosition.warriorBound, player)) {
                 player.addStatusEffect(new StatusEffectInstance(StatusEffects.JUMP_BOOST, 80, 2, false, false, true));
+                player.addStatusEffect(new StatusEffectInstance(EffectRegistry.RAGINGJAVELIN, 80, 0, false, false, true));
+            }
         }
 
     }
@@ -350,6 +352,13 @@ public abstract class ServerPlayerEntityMixin {
             if (FabricLoader.getInstance().isModLoaded("simplyswords")) {
                 SimplySwordsGemEffects.spellforged(player);
                 SimplySwordsGemEffects.soulshock(player);
+            }
+
+            //Passive Initiate Lightning Rod
+            if (HelperMethods.isUnlocked("simplyskills:tree",
+                    SkillReferencePosition.initiateLightningRod, player)
+                    && player.age %40 == 0 && player.hasStatusEffect(EffectRegistry.SOULSHOCK)) {
+                SignatureAbilities.castSpellEngineAOE(player, "simplyskills:lightning_rod", 5, 100, false);
             }
 
         }

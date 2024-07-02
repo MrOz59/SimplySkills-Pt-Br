@@ -138,8 +138,6 @@ public class InitiateAbilities {
             critChance = player.getAttributeValue(Registries.ATTRIBUTE.get(new Identifier("spell_power:critical_chance")));
         if (Registries.ATTRIBUTE.get(new Identifier("spell_power:critical_damage")) != null)
             critDamage = player.getAttributeValue(Registries.ATTRIBUTE.get(new Identifier("spell_power:critical_damage")));
-        //int critChance = SpellPower. ;// (int) player.getAttributeValue(SpellAttributes.CRITICAL_CHANCE.attribute) - 100;
-        //int critDamage = (int) player.getAttributeValue(SpellAttributes.CRITICAL_DAMAGE.attribute);
         if (player.getRandom().nextInt(100) < critChance) {
             player.heal((float) Math.min(3, critDamage / 100));
         }

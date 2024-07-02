@@ -531,6 +531,19 @@ public class AbilityEffects {
         }
     }
 
+    public static void effectRagingJavelin(PlayerEntity player) {
+        if (player.age % 8 == 0) {
+
+            String spellIdentifier = "simplyskills:passive_throw";
+            int radius = 10;
+            int chance = 80;
+
+            if (SignatureAbilities.castSpellEngineAOE(player, spellIdentifier, radius, chance, true)) {
+            }
+
+        }
+    }
+
 
 
 

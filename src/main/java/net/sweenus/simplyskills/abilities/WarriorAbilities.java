@@ -22,6 +22,13 @@ public class WarriorAbilities {
             player.addStatusEffect(new StatusEffectInstance(EffectRegistry.SPELLBREAKING, spellbreakingDuration, 0, false, false, true));
         }
     }
+    public static void passiveWarriorSpellbreakerOnHit(PlayerEntity player) {
+        int spellbreakingDuration = SimplySkills.warriorConfig.passiveWarriorSpellbreakerDuration;
+        int spellbreakingChance = SimplySkills.warriorConfig.passiveWarriorSpellbreakerChance;
+        if (player.getRandom().nextInt(100) < spellbreakingChance) {
+            player.addStatusEffect(new StatusEffectInstance(EffectRegistry.RAGINGJAVELIN, spellbreakingDuration / 2, 0, false, false, true));
+        }
+    }
 
     public static void passiveWarriorDeathDefy(PlayerEntity player) {
         int deathDefyFrequency = SimplySkills.warriorConfig.passiveWarriorDeathDefyFrequency;

@@ -54,6 +54,14 @@
                 "count": 1.0,
                 "min_speed": 0.01,
                 "max_speed": 0.02
+              },
+              {
+                "particle_id": "spell_engine:electric_arc_b",
+                "shape": "SPHERE",
+                "origin": "CENTER",
+                "count": 1.0,
+                "min_speed": 0.01,
+                "max_speed": 0.05
               }
             ],
             "model": {
@@ -90,6 +98,22 @@
           "count": 4,
           "min_speed": 0.01,
           "max_speed": 0.03
+        },
+        {
+          "particle_id": "spell_engine:electric_arc_a",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 6.0,
+          "min_speed": 0.01,
+          "max_speed": 0.05
+        },
+        {
+          "particle_id": "spell_engine:electric_arc_b",
+          "shape": "SPHERE",
+          "origin": "CENTER",
+          "count": 8.0,
+          "min_speed": 0.01,
+          "max_speed": 0.05
         }
       ],
       "sound": {

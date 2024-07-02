@@ -56,7 +56,7 @@ public class ProminenceInternalAbilities {
             int radius,
             int tickFrequency,
             int buffDuration,
-            StatusEffect buffOne,
+            @Nullable StatusEffect buffOne,
             int buffOneAmp,
             @Nullable StatusEffect buffTwo,
             int buffTwoAmp,
@@ -65,7 +65,7 @@ public class ProminenceInternalAbilities {
             @Nullable StatusEffect debuffTwo,
             int debuffTwoAmp) {
 
-        if (player.age % tickFrequency != 0) {
+        if (player.age % tickFrequency != 0 && (debuffOne == null && debuffTwo == null)) {
             return;
         }
         if (player.hasStatusEffect(buffOne)) {
@@ -88,7 +88,8 @@ public class ProminenceInternalAbilities {
 
                 // Apply buffs
                 if (isFriendly) {
-                    le.addStatusEffect(new StatusEffectInstance(buffOne, buffDuration, buffOneAmp, false, false, true));
+                    if (buffOne != null)
+                        le.addStatusEffect(new StatusEffectInstance(buffOne, buffDuration, buffOneAmp, false, false, true));
                     if (buffTwo != null)
                         le.addStatusEffect(new StatusEffectInstance(buffTwo, buffDuration, buffTwoAmp, false, false, true));
                 }
@@ -96,10 +97,10 @@ public class ProminenceInternalAbilities {
                 // Apply debuffs if they are not null
                 if (!isFriendly) {
                     if (debuffOne != null) {
-                        le.addStatusEffect(new StatusEffectInstance(debuffOne, buffDuration, debuffOneAmp));
+                        le.addStatusEffect(new StatusEffectInstance(debuffOne, buffDuration, debuffOneAmp, false, false, true));
                     }
                     if (debuffTwo != null) {
-                        le.addStatusEffect(new StatusEffectInstance(debuffTwo, buffDuration, debuffTwoAmp));
+                        le.addStatusEffect(new StatusEffectInstance(debuffTwo, buffDuration, debuffTwoAmp, false, false, true));
                     }
                 }
             }

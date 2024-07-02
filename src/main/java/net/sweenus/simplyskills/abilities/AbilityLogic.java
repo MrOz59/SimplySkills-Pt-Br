@@ -382,6 +382,12 @@ public class AbilityLogic {
                 && FabricLoader.getInstance().isModLoaded("paladins")) {
             ClericAbilities.signatureClericAnointWeaponEffect(player);
         }
+
+        //Passive Warrior Spellbreaker
+        if (HelperMethods.isUnlocked("simplyskills:tree",
+                SkillReferencePosition.warriorSpellbreaker, player)) {
+            WarriorAbilities.passiveWarriorSpellbreakerOnHit(player);
+        }
     }
 
 }
