@@ -8,8 +8,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.BowItem;
-import net.minecraft.item.CrossbowItem;
+import net.minecraft.item.*;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.registry.Registries;
@@ -113,7 +112,7 @@ public class ProminenceAbilities {
         int effectDamage = (int) player.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
         DamageSource damageSource = player.getDamageSources().playerAttack(player);
         if (HelperMethods.isDualWielding(player))
-            effectChance = effectChance * 2;
+            effectChance = effectChance * 3;
         if (player.getRandom().nextInt(100) < effectChance) {
             target.damage(damageSource, effectDamage);
             target.timeUntilRegen = 0;
@@ -122,8 +121,11 @@ public class ProminenceAbilities {
 
     public static void warriorsDevotion(PlayerEntity player) {
         if (player.age % 20 == 0 && HelperMethods.isUnlocked("puffish_skills:prom", SkillReferencePosition.promWarriorsDevotion, player)) {
-            if (player.getMainHandStack().isEmpty() || player.getOffHandStack().isEmpty()) {
-                player.addStatusEffect(new StatusEffectInstance(EffectRegistry.TITANSGRIP, 30, 0, false, false, true));
+            ItemStack mainhand = player.getMainHandStack();
+            ItemStack offhand = player.getOffHandStack();
+            if (mainhand.isEmpty() || offhand.isEmpty()) {
+                if  (mainhand.getItem() instanceof SwordItem || mainhand.getItem() instanceof AxeItem || offhand.getItem() instanceof SwordItem || offhand.getItem() instanceof AxeItem)
+                    player.addStatusEffect(new StatusEffectInstance(EffectRegistry.TITANSGRIP, 30, 0, false, false, true));
             }
        }
     }

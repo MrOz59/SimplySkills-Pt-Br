@@ -160,13 +160,18 @@ public class WarriorAbilities {
     }
 
     public static void passiveWarriorSwordfall(PlayerEntity player, LivingEntity target) {
+        if (player.getMainHandStack().isEmpty())
+            return;
         int effectChance = SimplySkills.warriorConfig.passiveWarriorSwordfallChance;
         if (FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.TITANSGRIP))
             effectChance = effectChance * 2;
         else if (!FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.MIGHT))
             effectChance = effectChance * 2;
         if (player.getRandom().nextInt(100) < effectChance) {
-            SignatureAbilities.castSpellEngineIndirectTarget(player, "simplyskills:physical_swordfall", 32, target, null);
+            if (FabricLoader.getInstance().isModLoaded("prominent"))
+                SignatureAbilities.castSpellEngineIndirectTarget(player, "simplyskills:physical_eldritch_hammers", 32, target, null);
+            else
+                SignatureAbilities.castSpellEngineIndirectTarget(player, "simplyskills:physical_swordfall", 32, target, null);
         }
     }
 
