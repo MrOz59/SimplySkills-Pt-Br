@@ -29,7 +29,7 @@ public abstract class ServerPlayerEntityMixin {
     @Inject(at = @At("HEAD"), method = "damage", cancellable = true)
     public void simplyskills$damage(DamageSource source, float amount, CallbackInfoReturnable<Boolean> cir) {
         PlayerEntity player = (PlayerEntity)(Object)this;
-        if (player instanceof ServerPlayerEntity serverPlayer) {
+        if (player instanceof ServerPlayerEntity serverPlayer && serverPlayer.isAlive()) {
 
             //Effect Barrier
             if (player.hasStatusEffect(EffectRegistry.BARRIER)) {
@@ -163,18 +163,15 @@ public abstract class ServerPlayerEntityMixin {
     @Inject(at = @At("HEAD"), method = "tick")
     public void simplyskills$tick(CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity)(Object)this;
-        if (player instanceof ServerPlayerEntity) {
+        if (player instanceof ServerPlayerEntity serverPlayer && serverPlayer.isAlive()) {
 
             if (player.hasStatusEffect(EffectRegistry.STEALTH)) {
                 player.setInvisible(player.hasStatusEffect(EffectRegistry.STEALTH));
             }
 
             //Passive Wayfarer Stealth
-            if (HelperMethods.isUnlocked("simplyskills:tree",
-                    SkillReferencePosition.wayfarerStealth, player)
-                    && player.isSneaking() && player.age % 10 == 0
-                    && !player.hasStatusEffect(EffectRegistry.REVEALED)) {
-                player.addStatusEffect(new StatusEffectInstance(EffectRegistry.STEALTH, 30, 0, false, false, true));
+            if (player.age % 10 == 0 && WayfarerAbilities.passiveWayfarerStealth(player)) {
+                player.addStatusEffect(new StatusEffectInstance(EffectRegistry.STEALTH, 20, 0, false, false, true));
             }
 
             //Passive Warrior Death Defy
@@ -374,7 +371,7 @@ public abstract class ServerPlayerEntityMixin {
     @Inject(at = @At("HEAD"), method = "attack")
     public void simplyskills$attack(Entity target,CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity)(Object)this;
-        if (player instanceof ServerPlayerEntity serverPlayer) {
+        if (player instanceof ServerPlayerEntity serverPlayer && serverPlayer.isAlive()) {
             if (target.isAttackable()) {
                 if (!target.handleAttack(player)) {
 

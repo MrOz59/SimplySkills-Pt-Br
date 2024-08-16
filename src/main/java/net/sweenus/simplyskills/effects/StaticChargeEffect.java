@@ -9,7 +9,10 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.predicate.entity.EntityPredicates;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
+import net.spell_engine.client.particle.GenericSpellParticle;
+import net.spell_engine.particle.Particles;
 import net.sweenus.simplyskills.SimplySkills;
 import net.sweenus.simplyskills.abilities.SignatureAbilities;
 import net.sweenus.simplyskills.registry.EffectRegistry;
@@ -35,7 +38,7 @@ public class StaticChargeEffect extends StatusEffect {
             if (livingEntity.age % leapFrequency == 0) {
 
 
-                Box box = HelperMethods.createBox(livingEntity, 3);
+                Box box = HelperMethods.createBox(livingEntity, 9);
                 for (Entity entities : livingEntity.getWorld().getOtherEntities(livingEntity, box, EntityPredicates.VALID_LIVING_ENTITY)) {
 
                     if (entities != null && ownerEntity != null) {
@@ -44,6 +47,7 @@ public class StaticChargeEffect extends StatusEffect {
                             SignatureAbilities.castSpellEngineIndirectTarget(ownerEntity,
                                     "simplyskills:static_charge",
                                     3, le, null);
+                            HelperMethods.spawnWaistHeightParticles((ServerWorld) livingEntity.getWorld(), Particles.electric_arc_A.particleType, livingEntity, le, 6);
                             le.addStatusEffect(new StatusEffectInstance(StatusEffects.WEAKNESS, weaknessDuration, weaknessAmplifier, false, false, true));
                             StatusEffect sc = EffectRegistry.STATICCHARGE;
                             HelperMethods.decrementStatusEffect(livingEntity, sc);

@@ -43,12 +43,12 @@ public class RogueConfig implements ConfigData {
     public int passiveRogueFleetfootedSpeedStacks = 1;
     public int passiveRogueFleetfootedSpeedMaxStacks = 6;
 
-    public int signatureRoguePreparationDuration = 160;
+    public int signatureRoguePreparationDuration = 80;
     public int signatureRoguePreparationSpeedAmplifier = 2;
-    public int signatureRoguePreparationShadowstrikeRange = 12;
+    public int signatureRoguePreparationShadowstrikeRange = 8;
     public int signatureRoguePreparationShadowstrikeRadius = 3;
     public int signatureRoguePreparationShadowstrikeDamageModifier = 3;
-    public int signatureRoguePreparationCooldown = 10;
+    public int signatureRoguePreparationCooldown = 15;
     public double signatureRogueSiphoningStrikesLeechMultiplier = 0.15;
     public int signatureRogueSiphoningStrikesDuration = 600;
     public int signatureRogueSiphoningStrikesStacks = 10;

@@ -4,9 +4,13 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.CrossbowItem;
 import net.minecraft.sound.SoundCategory;
+import net.minecraft.util.math.Box;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.World;
 import net.sweenus.simplyskills.SimplySkills;
 import net.sweenus.simplyskills.registry.EffectRegistry;
 import net.sweenus.simplyskills.registry.SoundRegistry;
@@ -119,6 +123,52 @@ public class WayfarerAbilities {
                 }
             }
         }
+    }
+
+    public static boolean passiveWayfarerStealth(PlayerEntity player) {
+        return HelperMethods.isUnlocked("simplyskills:tree",
+                SkillReferencePosition.wayfarerStealth, player)
+                && player.isSneaking()
+                && !player.hasStatusEffect(EffectRegistry.REVEALED) && !isPlayerTargeted(player, 20);
+    }
+
+    public static boolean isPlayerTargeted(PlayerEntity player, int radius) {
+        World world = player.getWorld();
+        Box box = new Box(player.getX() - radius, player.getY() - radius, player.getZ() - radius,
+                player.getX() + radius, player.getY() + radius, player.getZ() + radius);
+
+        // Check if any MobEntity has the player targeted
+        for (Entity entity : world.getOtherEntities(player, box, entity -> entity instanceof MobEntity)) {
+            if (entity instanceof MobEntity mobEntity) {
+                LivingEntity target = mobEntity.getTarget();
+                if (target == player) {
+                    return true;
+                }
+            }
+        }
+
+        // Check if any PlayerEntity has the player in their viewing angle
+        for (Entity entity : world.getOtherEntities(player, box, entity -> entity instanceof PlayerEntity)) {
+            if (entity instanceof PlayerEntity otherPlayer && otherPlayer != player) {
+                if (isInViewingAngle(otherPlayer, player)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    private static boolean isInViewingAngle(PlayerEntity viewer, PlayerEntity target) {
+        Vec3d viewerPos = viewer.getPos();
+        Vec3d targetPos = target.getPos();
+        Vec3d directionToTarget = targetPos.subtract(viewerPos).normalize();
+        Vec3d viewerLookVec = viewer.getRotationVec(1.0F).normalize();
+
+        double dotProduct = viewerLookVec.dotProduct(directionToTarget);
+        double threshold = Math.cos(Math.toRadians(90)); // 90 degrees viewing angle
+
+        return dotProduct > threshold;
     }
 
 

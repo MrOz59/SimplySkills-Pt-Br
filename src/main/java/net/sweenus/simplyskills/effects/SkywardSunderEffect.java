@@ -107,7 +107,7 @@ public class SkywardSunderEffect extends StatusEffect {
                         if ((entities instanceof LivingEntity le) && HelperMethods.checkFriendlyFire(le, player)
                                 && skywardSunder.getDuration() > slash_1 && skywardSunder.getDuration() % 2 == 0) {
 
-                            if (AscendancyAbilities.getAscendancyPoints(player) > 30)
+                            if (AscendancyAbilities.getAscendancyPoints(player) > 30 && le.isAlive())
                                 le.addStatusEffect(new StatusEffectInstance(EffectRegistry.DEATHMARK, 60, 0));
 
                             le.timeUntilRegen = 0;

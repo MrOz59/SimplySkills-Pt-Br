@@ -230,7 +230,7 @@ public class RogueAbilities {
 
         if (HelperMethods.isUnlocked("simplyskills:rogue",
                 SkillReferencePosition.rogueSpecialisationPreparationShadowstrikeShield, player)) {
-            HelperMethods.incrementStatusEffect(player, EffectRegistry.BARRIER, 450, 1, 5);
+            HelperMethods.incrementStatusEffect(player, EffectRegistry.BARRIER, 20, 0, 5);
             if (player.hasStatusEffect(EffectRegistry.REVEALED))
                 player.removeStatusEffect(EffectRegistry.REVEALED);
         }
