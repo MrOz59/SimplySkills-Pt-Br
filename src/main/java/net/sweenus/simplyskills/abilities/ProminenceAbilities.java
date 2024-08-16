@@ -112,8 +112,9 @@ public class ProminenceAbilities {
         int effectDamage = (int) player.getAttributeValue(EntityAttributes.GENERIC_ATTACK_DAMAGE);
         DamageSource damageSource = player.getDamageSources().playerAttack(player);
         if (HelperMethods.isDualWielding(player))
-            effectChance = effectChance * 3;
+            effectChance = effectChance * 2;
         if (player.getRandom().nextInt(100) < effectChance) {
+            target.timeUntilRegen = 0;
             target.damage(damageSource, effectDamage);
             target.timeUntilRegen = 0;
         }

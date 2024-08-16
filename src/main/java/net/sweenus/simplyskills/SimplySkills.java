@@ -45,6 +45,7 @@ public class SimplySkills implements ModInitializer {
     public static CrusaderConfig crusaderConfig;
     public static ClericConfig clericConfig;
     public static NecromancerConfig necromancerConfig;
+    public static MiscConfig miscConfig;
 
     private static void setSpecialisations() {
         specialisations.add("simplyskills:rogue");
@@ -87,6 +88,7 @@ public class SimplySkills implements ModInitializer {
         crusaderConfig = AutoConfig.getConfigHolder(ConfigWrapper.class).getConfig().crusader;
         clericConfig = AutoConfig.getConfigHolder(ConfigWrapper.class).getConfig().cleric;
         necromancerConfig = AutoConfig.getConfigHolder(ConfigWrapper.class).getConfig().necromancer;
+        miscConfig = AutoConfig.getConfigHolder(ConfigWrapper.class).getConfig().misc;
 
         EffectRegistry.registerEffects();
         PassiveSkillReward.register();

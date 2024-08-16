@@ -15,6 +15,7 @@ import net.spell_engine.api.effect.Synchronized;
 import net.spell_power.api.SpellPowerMechanics;
 import net.spell_power.api.SpellSchools;
 import net.sweenus.simplyskills.SimplySkills;
+import net.sweenus.simplyskills.config.MiscConfig;
 import net.sweenus.simplyskills.effects.*;
 
 public class EffectRegistry {
@@ -276,11 +277,11 @@ public class EffectRegistry {
     public static StatusEffect TITANSGRIP= new TitansGripEffect(StatusEffectCategory.BENEFICIAL, 3124687)
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_DAMAGE,
                     "53044215-cfb0-4a01-a33e-3bda11fab913",
-                    1.0,
+                    SimplySkills.miscConfig.promWarriorsDevotionAttackMulti,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
             .addAttributeModifier(EntityAttributes.GENERIC_ATTACK_SPEED,
                     "10d42842-3eb5-44c7-ba5f-a663ba984e66",
-                    -3.0,
+                    -SimplySkills.miscConfig.promWarriorsDevotionAttackSpeedMulti,
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
 
     public static StatusEffect MELODYOFWAR = new MelodyOfWarEffect(StatusEffectCategory.BENEFICIAL, 3124687);

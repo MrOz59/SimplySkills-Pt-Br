@@ -1,5 +1,6 @@
 package net.sweenus.simplyskills.mixins;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
@@ -67,6 +68,11 @@ public class PlayerEntityMixin {
             }
             // Golden Aegis
             if (HelperMethods.isUnlocked("simplyskills:ascendancy",
+                    SkillReferencePosition.ascendancyRighteousShield, player)) {
+                AscendancyAbilities.goldenAegis(player);
+            }
+            if (FabricLoader.getInstance().isModLoaded("prominent")
+                    && HelperMethods.isUnlocked("puffish_skills:prom",
                     SkillReferencePosition.ascendancyRighteousShield, player)) {
                 AscendancyAbilities.goldenAegis(player);
             }

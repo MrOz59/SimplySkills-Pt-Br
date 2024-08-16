@@ -360,9 +360,9 @@ public class AbilityLogic {
             WarriorAbilities.passiveWarriorTwinstrike(player, livingTarget);
         }
         //Passive Prom Twinstrike
-        if (FabricLoader.getInstance().isModLoaded("prominence")
+        if (FabricLoader.getInstance().isModLoaded("prominent")
                 && HelperMethods.isUnlocked("puffish_skills:prom",
-                SkillReferencePosition.warriorTwinstrike, player)
+                SkillReferencePosition.promTwinstrike, player)
                 && target instanceof LivingEntity livingTarget) {
             ProminenceAbilities.promTwinstrike(player, livingTarget);
         }

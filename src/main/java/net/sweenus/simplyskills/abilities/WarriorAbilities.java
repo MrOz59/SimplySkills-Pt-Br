@@ -7,7 +7,9 @@ import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.AxeItem;
 import net.minecraft.item.ShieldItem;
+import net.minecraft.item.SwordItem;
 import net.sweenus.simplyskills.SimplySkills;
 import net.sweenus.simplyskills.registry.EffectRegistry;
 import net.sweenus.simplyskills.util.HelperMethods;
@@ -160,18 +162,18 @@ public class WarriorAbilities {
     }
 
     public static void passiveWarriorSwordfall(PlayerEntity player, LivingEntity target) {
-        if (player.getMainHandStack().isEmpty())
-            return;
-        int effectChance = SimplySkills.warriorConfig.passiveWarriorSwordfallChance;
-        if (FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.TITANSGRIP))
-            effectChance = effectChance * 2;
-        else if (!FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.MIGHT))
-            effectChance = effectChance * 2;
-        if (player.getRandom().nextInt(100) < effectChance) {
-            if (FabricLoader.getInstance().isModLoaded("prominent"))
-                SignatureAbilities.castSpellEngineIndirectTarget(player, "simplyskills:physical_eldritch_hammers", 32, target, null);
-            else
-                SignatureAbilities.castSpellEngineIndirectTarget(player, "simplyskills:physical_swordfall", 32, target, null);
+        if (player.getMainHandStack().getItem() instanceof SwordItem || player.getMainHandStack().getItem() instanceof AxeItem) {
+            int effectChance = SimplySkills.warriorConfig.passiveWarriorSwordfallChance;
+            if (FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.TITANSGRIP))
+                effectChance = effectChance * 2;
+            else if (!FabricLoader.getInstance().isModLoaded("prominent") && player.hasStatusEffect(EffectRegistry.MIGHT))
+                effectChance = effectChance * 2;
+            if (player.getRandom().nextInt(100) < effectChance) {
+                if (FabricLoader.getInstance().isModLoaded("prominent"))
+                    SignatureAbilities.castSpellEngineIndirectTarget(player, "simplyskills:physical_eldritch_hammers", 32, target, null);
+                else
+                    SignatureAbilities.castSpellEngineIndirectTarget(player, "simplyskills:physical_swordfall", 32, target, null);
+            }
         }
     }
 

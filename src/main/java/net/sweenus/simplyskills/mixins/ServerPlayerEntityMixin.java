@@ -325,8 +325,14 @@ public abstract class ServerPlayerEntityMixin {
 
             // Golden Aegis
             if (HelperMethods.isUnlocked("simplyskills:ascendancy",
-                    SkillReferencePosition.ascendancyRighteousShield, player)
+                    SkillReferencePosition.ascendancyRighteousShield, player )
                     && AscendancyAbilities.getAscendancyPoints(player) > 29 && player.age %400 == 0) {
+                AscendancyAbilities.goldenAegis(player);
+            }
+            if (FabricLoader.getInstance().isModLoaded("prominent")
+                    && HelperMethods.isUnlocked("puffish_skills:prom",
+                    SkillReferencePosition.ascendancyRighteousShield, player)
+                    && ProminenceAbilities.getAscendancyPoints(player) > 29 && player.age %400 == 0) {
                 AscendancyAbilities.goldenAegis(player);
             }
 

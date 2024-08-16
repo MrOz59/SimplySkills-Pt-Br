@@ -1,5 +1,5 @@
 {
-  "school": "PHYSICAL_MELEE",
+  "school": "FIRE",
   "range": 16,
   "learn": {
     "tier": 3
@@ -55,9 +55,9 @@
               }
             ],
             "model": {
-              "model_id": "simplyskills:projectile/swordfall",
-              "render": "DEEP",
-              "light_emission": "NONE",
+              "model_id": "simplyskills:projectile/eldritch_hammers",
+              "render": "GLOW",
+              "light_emission": "RADIATE",
               "scale": 1.0
             }
           }
