@@ -182,8 +182,8 @@
   "effect.simplyskills.agile.description":                     "Grants 5% increased attack speed, movespeed, spell haste, and ranged damage per stack.",
 
   "effect.simplyskills.bone_armor":                     "Bone Armor",
-  "effect.simplyskills.bone_armor.desc":                "Grants 10% increased armor & armor toughness per bone. A bone is lost when hit",
-  "effect.simplyskills.bone_armor.description":                "Grants 10% increased armor & armor toughness per bone. A bone is lost when hit",
+  "effect.simplyskills.bone_armor.desc":                "Grants +1 increased armor & 10% armor toughness per bone. A bone is lost when hit",
+  "effect.simplyskills.bone_armor.description":                "Grants +1 increased armor & 10% armor toughness per bone. A bone is lost when hit",
 
   "effect.simplyskills.righteous_hammers":              "Righteous Hammers",
   "effect.simplyskills.righteous_hammers.desc":         "Grants 2% increased melee damage per hammer and damages nearby enemies.",
@@ -1541,7 +1541,7 @@
   "text.skills.necromancerGreaterDreadglare.description":"§7Your §6[Summoning Ritual]§7 no longer summons multiple minions and instead summons a single §fGreater Dreadglare§7.\n\nThe §fGreater Dreadglare§7 gains a bonus to all attribute inheritance, taunts enemies that it hits, and gains Might on hit for each harmful effect it has.",
 
   "text.skills.necromancerDeathEssence.title":"§f[Death Essence]",
-  "text.skills.necromancerDeathEssence.description":"§7Whenever a minion dies, you gain a stack of Bone Armor.\n\n§f(Bone Armor)§7 Shield yourself in a layer of bones, granting you 10% increased Armor & Armor Toughness per bone.\nTaking damage removes a layer.",
+  "text.skills.necromancerDeathEssence.description":"§7Whenever a minion dies, you gain a stack of Bone Armor.\n\n§f(Bone Armor)§7 Shield yourself in a layer of bones, granting you +1 increased Armor & 10% Armor Toughness per bone.\nTaking damage removes a layer.",
 
   "text.skills.necromancerDeathWarden.title":"§f[Death Warden]",
   "text.skills.necromancerDeathWarden.description":"§7When taking damage while below 50% HP, you siphon health from nearby minions to recover.",
@@ -1584,7 +1584,7 @@
   "text.skills.ascendancyRighteousHammers.description": "§7\nSummon hammers that orbit you for a duration, dealing melee damage to nearby enemies and granting you 2% increased melee attack per hammer.\n\n§6[For every 10 Ascendancy]§7\nSummon one additional hammer.\n\n§6[At 30+ Ascendancy]§7\nPeriodically create additional hammers that seek out and strike nearby targets.\n\n§a60s Cooldown§7",
 
   "text.skills.ascendancyBoneArmor.title": "Ascendancy Ability: §6[Bone Armor]§7",
-  "text.skills.ascendancyBoneArmor.description": "§7\nShield yourself in a layer of bones, granting you 10% increased Armor & Armor Toughness per bone.\nTaking damage removes a layer.\n\n§6[For every 10 Ascendancy]§7\nSummon one additional bone.\n\n§6[At 30+ Ascendancy]§7\nWhen your last layer of Bone Armor is removed, gain Undying and Regeneration for 8s.\n\n§a70s Cooldown§7\n\n§f(Undying)§7 Infused with celestial energy, the entity cannot be killed.\nHowever, if the entity is below 60% HP when the effect ends, they will take fatal damage.",
+  "text.skills.ascendancyBoneArmor.description": "§7\nShield yourself in a layer of bones, granting you +1 increased Armor & 10% Armor Toughness per bone.\nTaking damage removes a layer.\n\n§6[For every 10 Ascendancy]§7\nSummon one additional bone.\n\n§6[At 30+ Ascendancy]§7\nWhen your last layer of Bone Armor is removed, gain Undying and Regeneration for 8s.\n\n§a70s Cooldown§7\n\n§f(Undying)§7 Infused with celestial energy, the entity cannot be killed.\nHowever, if the entity is below 60% HP when the effect ends, they will take fatal damage.",
 
   "text.skills.ascendancyCyclonicCleave.title": "Ascendancy Ability: §6[Cyclonic Cleave]§7",
   "text.skills.ascendancyCyclonicCleave.description": "§7\nViolently swing your weapon around yourself while moving forward, dealing damage to nearby enemies.\nThis attack scales with the highest of your attack, ranged, or spell attributes.\n\n§6[For every 1 Ascendancy]§7\nIncreases ability damage.\n\n§6[At 30+ Ascendancy]§7\nCyclonic Cleave now pulls enemies it hits toward you.\n\n§a15s Cooldown§7",

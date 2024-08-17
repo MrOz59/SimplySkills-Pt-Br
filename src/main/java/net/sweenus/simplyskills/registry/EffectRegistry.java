@@ -1,6 +1,7 @@
 package net.sweenus.simplyskills.registry;
 
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.entity.attribute.EntityAttribute;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.effect.StatusEffect;
@@ -17,6 +18,7 @@ import net.spell_power.api.SpellSchools;
 import net.sweenus.simplyskills.SimplySkills;
 import net.sweenus.simplyskills.config.MiscConfig;
 import net.sweenus.simplyskills.effects.*;
+import net.sweenus.simplyskills.util.HelperMethods;
 
 public class EffectRegistry {
     public static double mightIncrease = 0.10;
@@ -211,10 +213,10 @@ public class EffectRegistry {
                     EntityAttributeModifier.Operation.MULTIPLY_TOTAL);
 
     public static StatusEffect BONEARMOR= new BoneArmorEffect(StatusEffectCategory.BENEFICIAL, 3124687)
-            .addAttributeModifier(EntityAttributes.GENERIC_ARMOR,
+            .addAttributeModifier(getPromBloodMagic(),
                     "30ac8be8-c2cc-46a5-9311-334b0cd88b7d",
-                    +0.1,
-                    EntityAttributeModifier.Operation.MULTIPLY_TOTAL)
+                    +1,
+                    EntityAttributeModifier.Operation.ADDITION)
             .addAttributeModifier(EntityAttributes.GENERIC_ARMOR_TOUGHNESS,
                     "a8c16e8b-9d82-4fe5-a0f2-2b9fe688b4da",
                     +0.1,
@@ -418,6 +420,17 @@ public class EffectRegistry {
             SACREDONSLAUGHT = registerStatusEffect("sacred_onslaught", SACREDONSLAUGHT);
         }
 
+    }
+
+    public static EntityAttribute getPromBloodMagic() {
+        EntityAttribute returnAttribute = EntityAttributes.GENERIC_ARMOR;
+        if (FabricLoader.getInstance().isModLoaded("prominent")) {
+            if (Registries.ATTRIBUTE.get(new Identifier("death_knights:blood")) != null) {
+                returnAttribute = Registries.ATTRIBUTE.get(new Identifier("death_knights:blood"));
+            }
+        }
+
+        return returnAttribute;
     }
 
 
