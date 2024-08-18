@@ -2734,7 +2734,7 @@
                 "type": "puffish_skills:attribute",
                 "data": {
                     "attribute": "puffish_skills:player.melee_damage",
-                    "value": 0.75,
+                    "value": 0.35,
                     "operation": "multiply_total"
                 }
             }

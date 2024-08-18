@@ -953,10 +953,10 @@
   "text.skills.warriorBound.description":"§7After activating Earthshaker, you gain Jump Boost and Raging Javelin for a short duration.\n\n§f(Raging Javelin)§7 causes you to periodically throw your held item at nearby enemies.",
 
   "text.skills.warriorDeathDefy.title":"§7§a[Death Defy]§7",
-  "text.skills.warriorDeathDefy.description":"§7When at low HP, you gain Regeneration and Exhaustion relative to your remaining health percent.\n\n§f(Exhaustion)§7 reduces your Melee Attack, Movement Speed, and Attack Speed by §c1% §f[x]§7 per stack.",
+  "text.skills.warriorDeathDefy.description":"§7When at low HP, you gain Regeneration and Exhaustion relative to your remaining health percent.\n\n§f(Exhaustion)§7 reduces your Melee Attack, Movement Speed, and Attack Speed by §c1% §f[x]§7 per stack.\n\nYou lose several stacks of Exhaustion per second, relative to your Stamina attribute.",
 
   "text.skills.warriorFrenzy.title":"§7§a[Frenzy]§7",
-  "text.skills.warriorFrenzy.description":"§7Gain 75% increased Melee Damage, but each time you hit an enemy you gain a stack of exhaustion.\n\n§f(Exhaustion)§7 reduces your Melee Attack, Movement Speed, and Attack Speed by §c1% §f[x]§7 per stack.",
+  "text.skills.warriorFrenzy.description":"§7Gain 35% increased Melee Damage, but each time you hit an enemy you gain a stack of exhaustion.\n\n§f(Exhaustion)§7 reduces your Melee Attack, Movement Speed, and Attack Speed by §c1% §f[x]§7 per stack.\n\nYou lose several stacks of Exhaustion per second, relative to your Stamina attribute.",
 
   "text.skills.warriorCarnage.title":"§7§a[Carnage]§7",
   "text.skills.warriorCarnage.description":"§7While at or above 75 stacks of Rage or Exhaustion, gain Health Boost and Immobilizing Aura.\n\n§f(Immobilizing Aura)§7 periodically inflicts nearby enemies with Immobilize.\n\n§f(Immobilize)§7 greatly slows and damages the victim when they attempt to move.",
@@ -1382,7 +1382,7 @@
   "text.skills.crusaderRetribution.description":"§7Chance on shield block to cast Judgement on your attacker.",
   
   "text.skills.crusaderExhaustiveRecovery.title":"§7§a[Exhaustive Recovery]§7",
-  "text.skills.crusaderExhaustiveRecovery.description":"§7Chance on shield block to instant-cast Flash Heal on yourself and gain several stacks of exhaustion.\n\n§f(Exhaustion)§7 reduces your Melee Attack, Movement Speed, and Attack Speed by §c1% §f[x]§7 per stack.",
+  "text.skills.crusaderExhaustiveRecovery.description":"§7Chance on shield block to instant-cast Flash Heal on yourself and gain several stacks of exhaustion.\n\n§f(Exhaustion)§7 reduces your Melee Attack, Movement Speed, and Attack Speed by §c1% §f[x]§7 per stack.\n\nYou lose several stacks of Exhaustion per second, relative to your Stamina attribute.",
   
   "text.skills.crusaderSignatureConsecration.title":"Signature Ability: §6[Consecration]§7",
   "text.skills.crusaderSignatureConsecration.description":"§7\nGain Consecration for 15s.\n\n§f(Consecration)§7 consecrate the ground beneath your feet, dealing damage to enemies while healing allies. Damage & Healing scales with Healing Spell Power.\n\n§a30s Cooldown§7",

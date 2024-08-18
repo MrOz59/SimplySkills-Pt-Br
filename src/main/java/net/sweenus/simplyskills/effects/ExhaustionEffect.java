@@ -18,11 +18,10 @@ public class ExhaustionEffect extends StatusEffect {
     public void applyUpdateEffect(LivingEntity livingEntity, int amplifier) {
         if (!livingEntity.getWorld().isClient()) {
             if (livingEntity instanceof PlayerEntity player) {
-                double exhaustResist = player.getAttributeValue(AttributesMod.STAMINA) * 2;
-                int frequency = 10;
+                int amount = (int) (1 + player.getAttributeValue(AttributesMod.STAMINA));
+                int frequency = 20;
                 if (player.age % frequency == 0) {
-                    if (player.getRandom().nextInt(100) < exhaustResist)
-                        HelperMethods.decrementStatusEffect(player, EffectRegistry.EXHAUSTION);
+                    HelperMethods.decrementStatusEffects(player, EffectRegistry.EXHAUSTION, amount);
                 }
             }
         }
